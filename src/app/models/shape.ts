@@ -1,0 +1,4 @@
+export enum Shape {
+    ROUND, OVAL, RECTANGLE, CATEYEGLASSES, SQUARE
+
+}
