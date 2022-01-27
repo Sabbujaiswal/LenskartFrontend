@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'frame',component:FrameComponent},
+  {path:'login',component:LoginComponent},
   {path:'frame-details/:id',component:FrameDetailsComponent},
   {path:'login',component:LoginComponent},
   {path:'',redirectTo:'home',pathMatch:'full'},

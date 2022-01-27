@@ -15,7 +15,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './carousel/carousel.component';
 import { LoginComponent } from './components/login/login.component';
-import { UserComponent } from './components/user/user.component';
 
 
 @NgModule({
@@ -27,8 +26,7 @@ import { UserComponent } from './components/user/user.component';
     HomeComponent,
     PageNotFoundComponent,
     CarouselComponent,
-    LoginComponent,
-    UserComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
