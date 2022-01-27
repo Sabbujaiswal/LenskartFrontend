@@ -1,1 +1,14 @@
-<p>frame works!</p>
+<div *ngIf="frames" [ngStyle]="{'display':'flex', 'margin-left':'20px'}">
+    <mat-card *ngFor = "let frame of frames" >
+      <mat-card-header>
+  
+        <mat-card-title>{{frame.framename}}</mat-card-title>
+  
+      </mat-card-header>
+      <img mat-card-md-image src="{{frame.frameImg}}">
+      <mat-card-actions>
+        <button mat-button color='primary' (click)='onSubmit(frame)'>ViewMore</button>
+        </mat-card-actions>
+    </mat-card>
+  </div>
+
