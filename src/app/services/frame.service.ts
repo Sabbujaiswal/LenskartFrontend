@@ -34,7 +34,7 @@ getDistinctCategory=():Observable<string[]>=>{
 return this.http.get<string[]>(url);
 }
 
- 
+
 
 }
 

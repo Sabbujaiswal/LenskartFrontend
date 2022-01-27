@@ -10,7 +10,6 @@ import { MatCardModule } from "@angular/material/card";
 import { MatTabsModule } from "@angular/material/tabs";
 
 
-
 @NgModule({
   declarations: [],
   imports: [
@@ -24,7 +23,7 @@ import { MatTabsModule } from "@angular/material/tabs";
     MatTabsModule,
     MatCardModule
   ],
-  exports:[
+  exports: [
     MatToolbarModule,
     MatInputModule,
     MatFormFieldModule,
