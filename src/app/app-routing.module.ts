@@ -6,11 +6,14 @@ import { FrameComponent } from './components/frame/frame.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { SubNavComponent } from './sub-nav/sub-nav.component';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'frame',component:FrameComponent},
   {path:'login',component:LoginComponent},
+  {path:'sub-nav',component:SubNavComponent},
+
   {path:'frame-details/:id',component:FrameDetailsComponent},
   {path:'login',component:LoginComponent},
   {path:'',redirectTo:'home',pathMatch:'full'},
