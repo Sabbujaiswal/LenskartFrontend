@@ -1,7 +1,8 @@
 .navbar-container{
     background-color: aqua;
     color: black;
-    position: fixed;
+    /* position: fixed; */
+  
    
 }
 .image{
@@ -16,9 +17,15 @@
 .phone-icon{
     margin-left: 8px;
     margin-right: 8px;
+   
+}
+.phone-img{
+    height: 30px;
+    width: 40px;
+    border-radius: 10px;
 }
 .spacer{
-    margin-left:700px;
+    margin-left:600px;
 }
 .small-space{
     margin-left: 20px;
@@ -30,5 +37,12 @@
 .menu-icon{
     height: 40px;
     width: 30px;
+   
+}
+.click-gif{
+    height: 60px;
+    width: 100px;
+    margin-left: 20px;
+    border-radius: 65px;
    
 }

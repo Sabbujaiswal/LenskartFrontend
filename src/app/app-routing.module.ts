@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CarouselComponent } from './carousel/carousel.component';
 import { FrameDetailsComponent } from './components/frame-details/frame-details.component';
 import { FrameComponent } from './components/frame/frame.component';
 import { HomeComponent } from './components/home/home.component';
