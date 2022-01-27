@@ -9,7 +9,6 @@ import { User } from '../models/user';
 })
 export class FrameService {
   private _baseurl:string='http://localhost:8081/frame-api/frames'
-  private _baseurl1:string='http://localhost:8081/user-api/users'
 
   constructor(private http:HttpClient) { }
 
@@ -37,15 +36,7 @@ getByLessPrice=(price:number):Observable<Frame[]>=>{
 // return this.http.get<string[]>(url);
 // }
 
-getUserByEmailAndPassword=(email:string,password:string):Observable<User>=>{
-  let url=`${this._baseurl1}/email/${email}/password/${password}}`;
-  return this.http.get<User>(url);
-}
 
-getUserByMobileAndPassword=(mobile:string,password:string):Observable<User>=>{
-  let url=`${this._baseurl1}/mobile/${mobile}/password/${password}}`;
-  return this.http.get<User>(url);
-}
  
 
 }

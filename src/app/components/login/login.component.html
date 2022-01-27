@@ -1,1 +1,75 @@
-<p>login works!</p>
+<div class="container">
+    <h2>Login</h2>
+    <mat-card>
+      <mat-tab-group>
+        <mat-tab label="Mobile No.">
+          <form
+            class="form-style"
+            #loginForm="ngForm"
+            (ngSubmit)="onLoginWithMobile(loginForm)"
+          >
+            <mat-form-field appearance="outline">
+              <mat-label>Mobile Number</mat-label>
+              <input
+                matInput
+                placeholder="Enter mobile number"
+                #mobile="ngModel"
+                name="mobile"
+                ngModel
+              />
+              <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+  
+            <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input
+                type="password"
+                matInput
+                placeholder="Enter password"
+                #password_mob="ngModel"
+                name="password"
+                ngModel
+              />
+              <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+  
+            <button type="submit" mat-flat-button color="primary">Sign In</button>
+          </form>
+        </mat-tab>
+        <mat-tab label="Email">
+          <form
+            class="form-style"
+            #form="ngForm"
+            (ngSubmit)="onLoginWithEmail(form)"
+          >
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input
+                matInput
+                type="email"
+                placeholder="Enter Email"
+                #email="ngModel"
+                name="email"
+                ngModel
+              />
+            </mat-form-field>
+  
+            <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input
+                type="password"
+                matInput
+                placeholder="Enter password"
+                #password="ngModel"
+                name="password"
+                ngModel
+              />
+              <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+  
+            <button type="submit" mat-flat-button color="primary">Sign In</button>
+          </form>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </div>
