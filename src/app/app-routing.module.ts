@@ -12,6 +12,7 @@ const routes: Routes = [
   {path:'frame',component:FrameComponent},
   {path:'login',component:LoginComponent},
   {path:'frame-details/:id',component:FrameDetailsComponent},
+  {path:'login',component:LoginComponent},
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'**',component:PageNotFoundComponent},
 

@@ -12,7 +12,11 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+<<<<<<< HEAD
   login=()=>{
+=======
+  onClickGif=()=>{
+>>>>>>> 25842e8d93ac66d169d23eeb4fe3af28d18920dc
     this._router.navigate(['/login'])
   }
 }
