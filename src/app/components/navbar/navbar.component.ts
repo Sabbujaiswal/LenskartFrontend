@@ -12,6 +12,11 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  login=()=>{
+    this._router.navigate(['/login'])
+  }
+
   onClickGif=()=>{
     this._router.navigate(['/sub-nav'])
   }

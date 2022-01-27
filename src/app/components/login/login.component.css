@@ -1,0 +1,16 @@
+.container {
+    width: 31.25rem;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .container > h2 {
+    font-size: 2rem;
+    margin: 1.5rem 0 1.5rem 0;
+  }
+  
+  .form-style {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
