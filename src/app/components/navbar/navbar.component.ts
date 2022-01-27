@@ -15,4 +15,9 @@ export class NavbarComponent implements OnInit {
   login=()=>{
     this._router.navigate(['/login'])
   }
+
+  onClickGif=()=>{
+    this._router.navigate(['/sub-nav'])
+
+  }
 }
