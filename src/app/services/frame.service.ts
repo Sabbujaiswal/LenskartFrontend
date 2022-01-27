@@ -2,12 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Frame } from '../models/frame';
+import { User } from '../models/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FrameService {
   private _baseurl:string='http://localhost:8081/frame-api/frames'
+  private _baseurl1:string='http://localhost:8081/user-api/users'
+
   constructor(private http:HttpClient) { }
 
   getAllFrames=():Observable<Frame[]> =>{
@@ -28,12 +31,21 @@ getByLessPrice=(price:number):Observable<Frame[]>=>{
   return this.http.get<Frame[]>(url);
 }
 
-getDistinctCategory=():Observable<string[]>=>{
-  let url=`${this._baseurl}/category/distinct`;
+// getDistinctCategory=():Observable<string[]>=>{
+//   let url=`${this._baseurl}/category/distinct`;
 
-return this.http.get<string[]>(url);
+// return this.http.get<string[]>(url);
+// }
+
+getUserByEmailAndPassword=(email:string,password:string):Observable<User>=>{
+  let url=`${this._baseurl1}/email/${email}/password/${password}}`;
+  return this.http.get<User>(url);
 }
 
+getUserByMobileAndPassword=(mobile:string,password:string):Observable<User>=>{
+  let url=`${this._baseurl1}/mobile/${mobile}/password/${password}}`;
+  return this.http.get<User>(url);
+}
  
 
 }

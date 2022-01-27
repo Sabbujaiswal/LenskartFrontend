@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './carousel/carousel.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     NavbarComponent,
     HomeComponent,
     PageNotFoundComponent,
-    CarouselComponent
+    CarouselComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
