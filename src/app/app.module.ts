@@ -12,6 +12,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselComponent } from './carousel/carousel.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     FrameDetailsComponent,
     NavbarComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -29,8 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    AppRoutingModule
-   
+    AppRoutingModule,
+    NgbModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
