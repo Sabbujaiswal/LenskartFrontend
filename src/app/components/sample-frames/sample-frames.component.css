@@ -15,6 +15,7 @@
     box-shadow: bisque;
     height: 400px;
     width: 550;
+    flex-wrap: wrap;
     
 
 }
@@ -51,6 +52,9 @@
     align-items: flex-end;
     justify-content: flex-end;
     margin-right: 30px;
+    margin-top: 700px;
+    margin-bottom: 200px;
+    
 }
 .all-button{
     background-color: #224eaf;
