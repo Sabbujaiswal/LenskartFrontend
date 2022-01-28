@@ -3,12 +3,19 @@
         <mat-card-title>{{frame.name}}</mat-card-title>
         <mat-card-subtitle>{{frame.brand}}</mat-card-subtitle>
         <mat-card-subtitle>{{frame.price}}</mat-card-subtitle>
+        <mat-card-subtitle>{{frame.frameId}}</mat-card-subtitle>
+
     </mat-card-header>
     <img mat-card-lg-image src="{{frame.frameImg}}"/>
     
     <mat-card-actions>
-        <button mat-raised-button color='primary'>Add to Basket</button>
+        <button mat-raised-button color='primary' (click)="addToBasket(frame)">Add to Basket</button>
         </mat-card-actions>
+        <mat-card-actions>
+            <button mat-raised-button color='primary' (click)="addToWishlist(frame)">Add to Wishlist</button>
+            </mat-card-actions>
+    
 </mat-card>
+
 
 

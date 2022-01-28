@@ -1,0 +1,71 @@
+.frame-container{
+    background-color: white;
+    margin: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #124292;
+
+
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.title{
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+.price{
+    color: black;
+    margin-top: 10px;
+    font-family: 'Roboto';
+}
+.rupees{
+    font-size: 20px;
+    font-weight: 500;
+}
+.view-button{
+    font-size: 20px;
+}
+.img-container{
+    height: 150px;
+    width: 200px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#68551e;
+    border-radius: 5px;
+    padding: 10px;
+}
+.btn-container{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+.all-button{
+    background-color: #224eaf;
+    height: 50px;
+    width: 100px;
+    font-size:15px;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+.sel-container{
+    height: 30px;
+    width: 270px;
+    border-radius: 5px;
+}
+.container-1{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+
+}

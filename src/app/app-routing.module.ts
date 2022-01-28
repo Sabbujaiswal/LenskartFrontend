@@ -9,12 +9,15 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { SampleFramesComponent } from './components/sample-frames/sample-frames.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { SubNavComponent } from './sub-nav/sub-nav.component';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'frame',component:FrameComponent},
   {path:'basket',component:BasketComponent},
+  {path:'wishlist',component:WishlistComponent},
+
   {path:'login',component:LoginComponent},
   {path:'sub-nav',component:SubNavComponent},
   {path:'end',component:EndComponent},
