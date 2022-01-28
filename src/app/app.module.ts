@@ -16,6 +16,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselComponent } from './carousel/carousel.component';
 import { LoginComponent } from './components/login/login.component';
 import { SubNavComponent } from './sub-nav/sub-nav.component';
+import { SampleFramesComponent } from './components/sample-frames/sample-frames.component';
+import { CartComponent } from './components/cart/cart.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { AddFrameComponent } from './components/add-frame/add-frame.component';
+import { UpdateFrameComponent } from './components/update-frame/update-frame.component';
+import { DeleteFrameComponent } from './components/delete-frame/delete-frame.component';
+import { EndComponent } from './components/end/end.component';
 
 
 @NgModule({
@@ -28,7 +35,14 @@ import { SubNavComponent } from './sub-nav/sub-nav.component';
     PageNotFoundComponent,
     CarouselComponent,
     LoginComponent,
-    SubNavComponent
+    SubNavComponent,
+    SampleFramesComponent,
+    CartComponent,
+    WishlistComponent,
+    AddFrameComponent,
+    UpdateFrameComponent,
+    DeleteFrameComponent,
+    EndComponent
   ],
   imports: [
     BrowserModule,

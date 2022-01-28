@@ -9,7 +9,8 @@ import { FrameService } from 'src/app/services/frame.service';
   styleUrls: ['./frame.component.css']
 })
 export class FrameComponent implements OnInit {
-
+  
+  search=''
   frames:Frame[]=[]
   brand=''
   constructor(private _frameService:FrameService,private _router:Router,private _activatedRoute:ActivatedRoute) { }
