@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Frame } from 'src/app/models/frame';
 import { FrameService } from 'src/app/services/frame.service';
@@ -10,6 +10,7 @@ import { FrameService } from 'src/app/services/frame.service';
   styleUrls: ['./frame-details.component.css']
 })
 export class FrameDetailsComponent implements OnInit {
+  
   frameId!:number;
   frame!:Frame;
   constructor(private _activatedRoute:ActivatedRoute,

@@ -5,7 +5,7 @@ import { Shopby } from "./shopby";
 
 export interface Frame {
     frameId: number;
-    framename: string;
+    name: string;
     frameSize: string;
     color: string;
     shopby: Shopby;

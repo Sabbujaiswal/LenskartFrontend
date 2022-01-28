@@ -26,6 +26,8 @@
 }
 .spacer{
     margin-left:600px;
+    margin-right: 20px;
+    
 }
 .small-space{
     margin-left: 20px;
@@ -45,4 +47,8 @@
     margin-left: 20px;
     border-radius: 65px;
    
+}
+.frames{
+    margin-left: 10px;
+    margin-right: 10px;
 }

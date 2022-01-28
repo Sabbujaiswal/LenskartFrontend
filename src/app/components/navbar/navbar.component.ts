@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-navbar',
@@ -7,17 +8,33 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+ 
+  count:number=0;
+  logStatus:string="Login/SignUp"
   constructor(private _router:Router) { }
-
+  // loggingin:string="Login/SignUp";
+  // logout:string="LogOut";
   ngOnInit(): void {
   }
   login=()=>{
-    this._router.navigate(['/login'])
+    this.count+=1;
+    if (this.count==1){
+      this._router.navigate(['/login'])
+      this.logStatus="LogOut"
+    }  
+    if(this.logStatus=="LogOut" && this.count==2){
+      this._router.navigate(['/end'])
+    }
   }
 
+  
+  
   onClickGif=()=>{
     this._router.navigate(['/sub-nav'])
 
+  }
+  onClickFrames=()=>{
+    this._router.navigate(['/sample-frames'])
+    
   }
 }
