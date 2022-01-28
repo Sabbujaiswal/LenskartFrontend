@@ -8,9 +8,9 @@
   <button (click)="onClickFrames()" class="frames" mat-button >Frames</button>
 
   <mat-icon >favorite_border</mat-icon>
-  <button mat-button >wishList</button>
+  <button mat-button  (click)="onClickWishlist()">wishList</button>
   <mat-icon class="small-space">work</mat-icon>
-  <button  (click)="onClickBasket()" class="font-size" mat-button>BasKet</button>
+  <button  (click)="onClickBasket()" class="font-size" mat-button >BasKet</button>
   <mat-icon class="small-space"> person_pin</mat-icon>
   <button class="font-size" (click)="login()" mat-button >{{logStatus}}</button>
   

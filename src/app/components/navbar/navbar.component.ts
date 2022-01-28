@@ -41,4 +41,8 @@ export class NavbarComponent implements OnInit {
     this._router.navigate(['/basket'])
 
   }
+  onClickWishlist=()=>{
+    this._router.navigate(['/wishlist'])
+
+  }
 }
