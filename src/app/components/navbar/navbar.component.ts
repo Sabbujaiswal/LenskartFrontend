@@ -37,4 +37,8 @@ export class NavbarComponent implements OnInit {
     this._router.navigate(['/sample-frames'])
     
   }
+  onClickBasket=()=>{
+    this._router.navigate(['/basket'])
+
+  }
 }

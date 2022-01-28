@@ -23,6 +23,7 @@ import { AddFrameComponent } from './components/add-frame/add-frame.component';
 import { UpdateFrameComponent } from './components/update-frame/update-frame.component';
 import { DeleteFrameComponent } from './components/delete-frame/delete-frame.component';
 import { EndComponent } from './components/end/end.component';
+import { BasketComponent } from './components/basket/basket.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { EndComponent } from './components/end/end.component';
     AddFrameComponent,
     UpdateFrameComponent,
     DeleteFrameComponent,
-    EndComponent
+    EndComponent,
+    BasketComponent
   ],
   imports: [
     BrowserModule,
