@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
+import { LoginService } from 'src/app/services/login.service';
 import { UserserviceService } from 'src/app/services/userservice.service';
 
 @Component({
@@ -10,10 +11,9 @@ import { UserserviceService } from 'src/app/services/userservice.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
- count:number=0;
+  
+  constructor(private _userService:UserserviceService,private _router:Router,private _loginService:LoginService) { }
   user!:User;
-  constructor(private _userService:UserserviceService,private _router:Router) { }
-
   ngOnInit(): void {
   }
 
@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit {
     this._userService
       .getUserByMobileAndPassword(nuser.mobile, nuser.password)
       .subscribe((data) => {
-        this.count+=1;
         console.log(data);
         this.user = data;
         this._router.navigate(['/frame']);
@@ -38,7 +37,6 @@ export class LoginComponent implements OnInit {
     this._userService
       .getUserByEmailAndPassword(nuser.email, nuser.password)
       .subscribe((data) => {
-       this.count+=1;
         console.log(data);
         this.user = data;
         this._router.navigate(['/frame']);
