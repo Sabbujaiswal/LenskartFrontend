@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/models/user';
 import { LoginService } from 'src/app/services/login.service';
 import { UserserviceService } from 'src/app/services/userservice.service';
@@ -12,9 +12,22 @@ import { UserserviceService } from 'src/app/services/userservice.service';
 })
 export class LoginComponent implements OnInit {
   
-  constructor(private _userService:UserserviceService,private _router:Router,private _loginService:LoginService) { }
   user!:User;
+  constructor(private _userService:UserserviceService,private _router:Router,private activatedRoute:ActivatedRoute) { }
+  returnUrl:string=''
   ngOnInit(): void {
+
+    this.activatedRoute.queryParamMap.subscribe(params=>{
+      let url=params.get('returnUrl');
+      console.log(url);
+      if(url){
+        alert('invalid crendentials');
+        this.returnUrl=url;
+      }
+    
+     
+    })
+ 
   }
 
   onLoginWithMobile = (loginForm: NgForm) => {
@@ -45,7 +58,5 @@ export class LoginComponent implements OnInit {
 
 }
   
-
-
 
 

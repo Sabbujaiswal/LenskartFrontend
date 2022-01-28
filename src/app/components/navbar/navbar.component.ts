@@ -16,7 +16,6 @@ export class NavbarComponent implements OnInit {
   // logout:string="LogOut";
   ngOnInit(): void {
   }
-
   login=()=>{
     this.count+=1;
     if (this.count==1){
@@ -32,9 +31,14 @@ export class NavbarComponent implements OnInit {
   
   onClickGif=()=>{
     this._router.navigate(['/sub-nav'])
+
   }
   onClickFrames=()=>{
     this._router.navigate(['/sample-frames'])
     
+  }
+  onClickBasket=()=>{
+    this._router.navigate(['/basket'])
+
   }
 }
