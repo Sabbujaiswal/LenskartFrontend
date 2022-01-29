@@ -11,23 +11,23 @@ import { UserserviceService } from 'src/app/services/userservice.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  
-  user!:User;
-  constructor(private _userService:UserserviceService,private _router:Router,private activatedRoute:ActivatedRoute) { }
-  returnUrl:string=''
+
+  user!: User;
+  constructor(private _userService: UserserviceService, private _router: Router, private activatedRoute: ActivatedRoute) { }
+  returnUrl: string = ''
   ngOnInit(): void {
 
-    this.activatedRoute.queryParamMap.subscribe(params=>{
-      let url=params.get('returnUrl');
+    this.activatedRoute.queryParamMap.subscribe(params => {
+      let url = params.get('returnUrl');
       console.log(url);
-      if(url){
+      if (url) {
         alert('invalid crendentials');
-        this.returnUrl=url;
+        this.returnUrl = url;
       }
-    
-     
+
+
     })
- 
+
   }
 
   onLoginWithMobile = (loginForm: NgForm) => {
@@ -37,26 +37,43 @@ export class LoginComponent implements OnInit {
 
     this._userService
       .getUserByMobileAndPassword(nuser.mobile, nuser.password)
-      .subscribe((data) => {
-        console.log(data);
-        this.user = data;
-        this._router.navigate(['/frame']);
+      .subscribe(response => {
+        if (!response) {
+          alert('invalid crendentials');
+          this._router.navigate(['/login']);
+        } else if (this.returnUrl != null) {
+          this._router.navigate([this.returnUrl]);
+
+
+        } else {
+          this._router.navigate(['/home']);
+        }
       });
-  };
+  }
 
   onLoginWithEmail = (form: NgForm) => {
     let nuser = form.value;
+    console.log(form.value)
 
     this._userService
       .getUserByEmailAndPassword(nuser.email, nuser.password)
-      .subscribe((data) => {
-        console.log(data);
-        this.user = data;
-        this._router.navigate(['/frame']);
+      .subscribe(response => {
+        if (!response) {
+          alert('invalid credentials');
+          this._router.navigate(['/login']);
+        } else if (this.returnUrl != null) {
+          this._router.navigate([this.returnUrl]);
+
+        } else {
+          this._router.navigate(['/home']);
+        }
+
       });
-}
+  }
 
 }
-  
+
+
+
 
 

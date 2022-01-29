@@ -40,5 +40,43 @@
     border-radius: 20px;
 
 }
+.container1{
+    background-color: navy;
+
+}
+.title1{
+    padding-top: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+    color:white;
+}
+.title2{
+    color:white;
+}
+.icons{
+    color:white;
+}
+.icon1{
+    color:white;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+    position: sticky;
+
+
+}
+/* .fixed-sidebar {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    height: 300px;
+    padding: 30px 0;
+    background: #555;
+    color: #fff;
+    top: 10px;
+    bottom: auto;
+} */
 
 
