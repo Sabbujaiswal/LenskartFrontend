@@ -11,30 +11,40 @@ import { LoginComponent } from '../login/login.component';
   styleUrls: ['./frame.component.css']
 })
 export class FrameComponent implements OnInit {
-
-  search=''
-  frames:Frame[]=[]
-  brand=''
-  constructor(private _frameService:FrameService,private _router:Router,private _activatedRoute:ActivatedRoute) { }
+  searchOption = 'Search '
+  options=[
+    {id:1,title:'Brand',searchContent:'Search based on brand'},
+    {id:2,title:'Category',searchContent:'Search based on category'},
+    {id:3,title:'Gender',searchContent:'Search based on gender'}
+   ]
+  frames: Frame[] = []
+  choice = ''
+  constructor(private _frameService: FrameService, private _router: Router, private _activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-     this._activatedRoute.queryParamMap.subscribe(map=>{
-       let fbrand=map.get('brand');
-       if(fbrand)
-       this.brand=fbrand;
+    
+    this._activatedRoute.queryParamMap.subscribe(map => {
+      
+      this._frameService.getAllFrames().subscribe({
+        next: (data) => {
+          this.frames = data
+         // this.frames = data.filter(t=>{t.categories.forEach(cat=>{cat.categoryName==this.choice})})
+         //  console.log(data);
+        },
+        error: error => console.log(error),
+        // complete:()=>console.log('completed')
+      })
 
-    this._frameService.getAllFrames().subscribe({
-      next:(data)=>{
-        this.frames=data;
-        console.log(data);
-      },
-      error:error=>console.log(error),
-      complete:()=>console.log('completed')})
+
     });
   }
 
-  onSubmit=(frame:Frame)=>{
-    console.log(frame)
-    this._router.navigate(['/frame-details',frame.frameId]);
+  onSubmit = (frame: Frame) => {
+    //  console.log(frame)
+    this._router.navigate(['/frame-details', frame.frameId]);
   };
+  changeValue(value:any){
+    this.searchOption=value.searchContent
+    this.choice=value.title.toLowerCase()
+  }
 }

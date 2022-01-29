@@ -1,12 +1,12 @@
 <div class="container-1">
   Explore based on
-  <select class="sel-container">
-    <option value="brand" >Brand</option>
-    <option value="brand">Category</option>
-    <option value="brand">Gender</option>
-  </select>
+  <mat-select class="sel-container" (valueChange)="changeValue($event)" placeholder="search">
+    <mat-option *ngFor="let option of options" [value]="option" >{{option.title}}</mat-option>
+  </mat-select>
+  <div>
+  <input type="search" placeholder={{searchOption}} class="search-input" >
+  </div>
 </div>
-
 
 <!-- <mat-select required ngModel name="category" [(ngModel)]="category">
   <mat-option

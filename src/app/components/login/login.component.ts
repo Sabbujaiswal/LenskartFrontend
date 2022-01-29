@@ -12,36 +12,34 @@ import { UserserviceService } from 'src/app/services/userservice.service';
 })
 export class LoginComponent implements OnInit {
   
-  user!:User;
-  constructor(private _userService:UserserviceService,private _router:Router,private activatedRoute:ActivatedRoute) { }
-  returnUrl:string=''
+  user!: User;
+  constructor(private _userService: UserserviceService, private _router: Router, private activatedRoute: ActivatedRoute,private _loginService:LoginService) { }
+  returnUrl: string = ''
   ngOnInit(): void {
 
-    this.activatedRoute.queryParamMap.subscribe(params=>{
-      let url=params.get('returnUrl');
+    this.activatedRoute.queryParamMap.subscribe(params => {
+      let url = params.get('returnUrl');
       console.log(url);
-      if(url){
+      if (url) {
         alert('invalid crendentials');
-        this.returnUrl=url;
+        this.returnUrl = url;
       }
-    
-     
     })
- 
   }
 
   onLoginWithMobile = (loginForm: NgForm) => {
     let nuser = loginForm.value;
-
-    console.log(loginForm.value)
-
+   // console.log(loginForm.value)
     this._userService
       .getUserByMobileAndPassword(nuser.mobile, nuser.password)
       .subscribe((data) => {
-        console.log(data);
+       // console.log(data);
         this.user = data;
+        //console.log(this.user)
         this._router.navigate(['/frame']);
       });
+       this._loginService.countOfLoginPage+=1
+      
   };
 
   onLoginWithEmail = (form: NgForm) => {
@@ -50,11 +48,13 @@ export class LoginComponent implements OnInit {
     this._userService
       .getUserByEmailAndPassword(nuser.email, nuser.password)
       .subscribe((data) => {
-        console.log(data);
+       // console.log(data);
         this.user = data;
         this._router.navigate(['/frame']);
       });
-}
+       this._loginService.countOfLoginPage+=1
+
+  }
 
 }
   

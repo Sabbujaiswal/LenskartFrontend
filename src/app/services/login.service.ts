@@ -7,8 +7,11 @@ import { User } from '../models/user';
   providedIn: 'root'
 })
 export class LoginService {
+  countOfLoginPage:number=0;
+  logStatus:string="Login/SignUp";
   user: User | undefined;
   users:User[]|undefined=[];
+  isUserLoggedIn:boolean=false;
   private _baseurl1:string='http://localhost:8081/user-api/users'
 
   constructor(private http:HttpClient) { }
@@ -16,7 +19,6 @@ export class LoginService {
   loginWithEmail=(email:string,password:string):Observable<User>=>{
     let url=`${this._baseurl1}/email/${email}/password/${password}`;
     const user = this.http.get<User>(url)
-    user.subscribe(data => this.user = data);
     return user;
   }
   
@@ -27,10 +29,4 @@ export class LoginService {
     return user;
   }
 
-  getLoginUser=():Observable<User> | null =>{
-    if(!this.user) {
-      return null;
-    }
-    return of(this.user)
-  }
 }
