@@ -24,10 +24,10 @@ export class SampleFramesComponent implements OnInit {
       this._frameService.getAllFrames().subscribe({
         next: (data) => {
 
-          for (let i = 1; i <= 10; i++) {
+          for (let i = 1; i <= 6; i++) {
             console.log(i)
             this.frames.push(data[i])
-            console.log(data[i])
+           // console.log(data[i])
           }
 
           //console.log(data[0]);
@@ -39,24 +39,39 @@ export class SampleFramesComponent implements OnInit {
   }
 
   onSubmit = (frame: Frame) => {
-    console.log(frame)
-    // if (this.count<1)
-    console.log(this._loginService.getLoginUser())
-    
-    if (this._loginService.getLoginUser() == null) {
+    if (this._loginService.countOfLoginPage==0 && this._loginService.logStatus=="Login/SignUp"){
       this._router.navigate(['/login']);
+     // console.log(this._loginService.countOfLoginPage);
+     
+     console.log( this._loginService.logStatus)
+     setTimeout(()=>{
+      if ( this._loginService.countOfLoginPage==1){
+        this._loginService.logStatus="LogOut"
+       
+      }
+    },9000)
+    
+    }else{
+      this._router.navigate(['/frame'])
     }
-    else {
-      this._router.navigate(['/frame-details', frame.frameId]);
-    }
+   
   };
 
   seeAll = () => {
-    // if (this._login.count<1)
-    if (this._loginService.getLoginUser() == null) {
+   
+    if (this._loginService.countOfLoginPage==0 && this._loginService.logStatus=="Login/SignUp"){
+     // console.log(this._loginService.countOfLoginPage)
       this._router.navigate(['/login']);
-    }
-    else {
+      //console.log(this._loginService.countOfLoginPage);
+      console.log( this._loginService.logStatus)
+      setTimeout(()=>{
+        if ( this._loginService.countOfLoginPage==1){
+          this._loginService.logStatus="LogOut"
+  
+        }
+      },10000)
+
+    }else{
       this._router.navigate(['/frame'])
     }
 

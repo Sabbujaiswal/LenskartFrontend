@@ -17,7 +17,6 @@ const routes: Routes = [
   {path:'frame',component:FrameComponent},
   {path:'basket',component:BasketComponent},
   {path:'wishlist',component:WishlistComponent},
-
   {path:'login',component:LoginComponent},
   {path:'sub-nav',component:SubNavComponent},
   {path:'end',component:EndComponent},
