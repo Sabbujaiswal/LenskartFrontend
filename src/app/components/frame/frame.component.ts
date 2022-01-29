@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Frame } from 'src/app/models/frame';
 import { FrameService } from 'src/app/services/frame.service';
-import { LoginService } from 'src/app/services/login.service';
-import { LoginComponent } from '../login/login.component';
+
 
 @Component({
   selector: 'app-frame',
@@ -11,25 +11,28 @@ import { LoginComponent } from '../login/login.component';
   styleUrls: ['./frame.component.css']
 })
 export class FrameComponent implements OnInit {
+  userSearch=''
   searchOption = 'Search '
-  options=[
-    {id:1,title:'Brand',searchContent:'Search based on brand'},
-    {id:2,title:'Category',searchContent:'Search based on category'},
-    {id:3,title:'Gender',searchContent:'Search based on gender'}
-   ]
+  selected = 'domain';
+  nframes: Frame[] = []
+  options = [
+    { id: 1, title: 'Brand', searchContent: 'Search based on brand' },
+    { id: 2, title: 'Category', searchContent: 'Search based on category' },
+    { id: 3, title: 'Shape', searchContent: 'Search based on shape' }
+  ]
   frames: Frame[] = []
   choice = ''
   constructor(private _frameService: FrameService, private _router: Router, private _activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    
+    console.log(this.userSearch)
     this._activatedRoute.queryParamMap.subscribe(map => {
-      
+
       this._frameService.getAllFrames().subscribe({
         next: (data) => {
           this.frames = data
-         // this.frames = data.filter(t=>{t.categories.forEach(cat=>{cat.categoryName==this.choice})})
-         //  console.log(data);
+          // this.frames = data.filter(t=>{t.categories.forEach(cat=>{cat.categoryName==this.choice})})
+          //  console.log(data);
         },
         error: error => console.log(error),
         // complete:()=>console.log('completed')
@@ -43,8 +46,30 @@ export class FrameComponent implements OnInit {
     //  console.log(frame)
     this._router.navigate(['/frame-details', frame.frameId]);
   };
-  changeValue(value:any){
-    this.searchOption=value.searchContent
-    this.choice=value.title.toLowerCase()
+  changeValue(value: any) {
+    this.searchOption = value.searchContent
+    this.choice = value.title.toLowerCase()
+    console.log(this.choice)
+  }
+  showFrames=()=>{
+
+  }
+  onSubmitForm(form: NgForm) {
+    console.log("initial form value "+ form.value);
+    const formValue=form.value.search;
+    console.log("B "+formValue)
+    this._frameService.getAllFrames().subscribe(data=>{
+      this.frames=data.filter(t=>{ 
+        console.log(t.frameSize.toLowerCase())
+        console.log(formValue)
+        t.frameSize.toLowerCase()==formValue
+        console.log(t.frameSize.toLowerCase()==formValue)
+      
+      
+      })
+      //this.frames=data.filter(t=>{t.categories.forEach(cat=>{cat.categoryName.toLowerCase()=="reading"
+    //  console.log(cat.categoryName.toLowerCase())})})
+      console.log(this.frames)
+    })
   }
 }

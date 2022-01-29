@@ -1,23 +1,14 @@
 <div class="container-1">
   Explore based on
-  <mat-select class="sel-container" (valueChange)="changeValue($event)" placeholder="search">
-    <mat-option *ngFor="let option of options" [value]="option" >{{option.title}}</mat-option>
+  <mat-select matInput class="sel-container" (valueChange)="changeValue($event)" [(value)]="selected"
+    placeholder="Mode">
+    <mat-option *ngFor="let option of options" [value]="option">{{option.title}}</mat-option>
   </mat-select>
-  <div>
-  <input type="search" placeholder={{searchOption}} class="search-input" >
-  </div>
+  <form #form="ngForm" (ngSubmit)="onSubmitForm(form)">
+    <input type="search" name="search" placeholder={{searchOption}} #search="ngModel" ngModel />
+    <button type="submit">Search</button>
+  </form>
 </div>
-
-<!-- <mat-select required ngModel name="category" [(ngModel)]="category">
-  <mat-option
-    *ngFor="let category of categories"
-    value={{category}}
-  >
-    {{ category }}
-  </mat-option>
-</mat-select> -->
-
-
 
 <div class="container">
   <mat-card *ngFor="let frame of frames" class="frame-container">
