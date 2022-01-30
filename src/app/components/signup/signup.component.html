@@ -1,0 +1,10 @@
+<h1 [ngStyle]="{'text-align':'center'}">Register new</h1>
+<form #addForm = "ngForm" (ngSubmit)="onAdd(addForm)">
+
+    <mat-form-field>
+        <input matInput username="username" #username="ngModel"  ngModel placeholder="Enter Username">
+    </mat-form-field>
+
+   <mat-form-field>
+       <input matInput >
+   </mat-form-field>

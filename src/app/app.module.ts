@@ -26,6 +26,7 @@ import { EndComponent } from './components/end/end.component';
 import { BasketComponent } from './components/basket/basket.component';
 import { FrameChoiceComponent } from './components/frame-choice/frame-choice.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { AdminComponent } from './components/admin/admin.component';
     EndComponent,
     BasketComponent,
     FrameChoiceComponent,
-    AdminComponent
+    AdminComponent,
+    SignupComponent
     
   ],
   imports: [
