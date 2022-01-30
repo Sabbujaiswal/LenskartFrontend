@@ -1,12 +1,14 @@
 <div class="container-1">
-  Explore based on
+  <h1 class="heading">
+    Explore based on  
+  </h1>
   <mat-select matInput class="sel-container" (valueChange)="changeValue($event)" [(value)]="selected"
     placeholder="Mode">
     <mat-option *ngFor="let option of options" [value]="option">{{option.title}}</mat-option>
   </mat-select>
   <form #form="ngForm" (ngSubmit)="onSubmitForm(form)">
-    <input type="search" name="search" placeholder={{searchOption}} #search="ngModel" ngModel />
-    <button type="submit">Search</button>
+    <input type="search" name="search" placeholder={{searchOption}} #search="ngModel" ngModel class="search-container"/>
+    <button type="submit" class="search-btn">Search</button>
   </form>
 </div>
 

@@ -57,14 +57,13 @@
     color:white;
 }
 .icon1{
-    color:white;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 5px;
-    position: sticky;
-
+   color: black;
+   display: flex;
+   justify-self: flex-end;
+   align-self: flex-end;
 
 }
+
 /* .fixed-sidebar {
     position: -webkit-sticky;
     position: -moz-sticky;

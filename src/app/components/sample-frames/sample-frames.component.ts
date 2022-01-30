@@ -41,9 +41,9 @@ export class SampleFramesComponent implements OnInit {
   onSubmit = (frame: Frame) => {
     if (this._loginService.countOfLoginPage==0 && this._loginService.logStatus=="Login/SignUp"){
       this._router.navigate(['/login']);
-     // console.log(this._loginService.countOfLoginPage);
+      console.log(this._loginService.countOfLoginPage);
      
-     console.log( this._loginService.logStatus)
+    // console.log( this._loginService.logStatus)
      setTimeout(()=>{
       if ( this._loginService.countOfLoginPage==1){
         this._loginService.logStatus="LogOut"
@@ -60,7 +60,7 @@ export class SampleFramesComponent implements OnInit {
   seeAll = () => {
    
     if (this._loginService.countOfLoginPage==0 && this._loginService.logStatus=="Login/SignUp"){
-     // console.log(this._loginService.countOfLoginPage)
+      //console.log(this._loginService.countOfLoginPage)
       this._router.navigate(['/login']);
       //console.log(this._loginService.countOfLoginPage);
       console.log( this._loginService.logStatus)

@@ -5,7 +5,6 @@
     border-width: 2px;
     border-color: #124292;
 
-
 }
 .container{
     display: flex;
@@ -84,6 +83,36 @@
 }
 .button{
     margin: 10px;
+
+}
+.search-btn{
+    height: 30px;
+    width: 120px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: #4e3af3;
+    color: white;
+    border-style: none;
+
+}
+
+.heading{
+    font-size: 20px;
+    margin-right: 10px;
+    font-family: serif;
+    font-weight: 300;
+
+}
+.search-container{
+    height: 30px;
+    width: 270px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkmagenta;
+    background-color: white;
+    margin-left: 10px;
+
 }
 
 

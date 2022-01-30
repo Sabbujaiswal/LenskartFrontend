@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CarouselComponent } from './carousel/carousel.component';
+import { AdminComponent } from './components/admin/admin.component';
 import { BasketComponent } from './components/basket/basket.component';
 import { EndComponent } from './components/end/end.component';
 import { FrameDetailsComponent } from './components/frame-details/frame-details.component';
@@ -20,6 +21,8 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'sub-nav',component:SubNavComponent},
   {path:'end',component:EndComponent},
+  {path:'admin',component:AdminComponent},
+
 
   {path:'sample-frames',component:SampleFramesComponent},
   {path:'frame-details/:id',component:FrameDetailsComponent},

@@ -25,6 +25,7 @@ import { DeleteFrameComponent } from './components/delete-frame/delete-frame.com
 import { EndComponent } from './components/end/end.component';
 import { BasketComponent } from './components/basket/basket.component';
 import { FrameChoiceComponent } from './components/frame-choice/frame-choice.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 
 @NgModule({
@@ -46,7 +47,9 @@ import { FrameChoiceComponent } from './components/frame-choice/frame-choice.com
     DeleteFrameComponent,
     EndComponent,
     BasketComponent,
-    FrameChoiceComponent
+    FrameChoiceComponent,
+    AdminComponent
+    
   ],
   imports: [
     BrowserModule,
