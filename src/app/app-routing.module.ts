@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { SampleFramesComponent } from './components/sample-frames/sample-frames.component';
+import { SignupComponent } from './components/signup/signup.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { SubNavComponent } from './sub-nav/sub-nav.component';
 
@@ -20,7 +21,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'sub-nav',component:SubNavComponent},
   {path:'end',component:EndComponent},
-
+  {path:'signup',component:SignupComponent},
   {path:'sample-frames',component:SampleFramesComponent},
   {path:'frame-details/:id',component:FrameDetailsComponent},
   {path:'login',component:LoginComponent},

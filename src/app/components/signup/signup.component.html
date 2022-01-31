@@ -1,10 +1,129 @@
 <h1 [ngStyle]="{'text-align':'center'}">Register new</h1>
 <form #addForm = "ngForm" (ngSubmit)="onAdd(addForm)">
+    <div class="container">
+        <h1>Sign Up</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
 
-    <mat-form-field>
-        <input matInput username="username" #username="ngModel"  ngModel placeholder="Enter Username">
+        <label for="username"><b>Username</b></label>
+        <input type="text" #userName="ngModel" ngModel placeholder="Enter User Name" name="userName" required>
+        <br>
+        <br>
+
+        <label for="mobile"><b>Mobile</b></label>
+        <input type="text" #mobile="ngModel" ngModel placeholder="Enter Mobile Number" name="mobile" required>
+        <br>
+        <br>
+
+        <label for="address"><b>Address</b></label>
+        <input type="text" #address="ngModel" ngModel placeholder="Enter Address" name="address" required>
+        <br>
+        <br>
+
+        <label for="zipcode"><b>Zipcode</b></label>
+        <input type="text" #zipcode="ngModel" ngModel placeholder="Enter Zipcode" name="zipcode" required>
+        <br>
+        <br>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" #email= "ngModel" ngModel placeholder="Enter Email" name="email" required>
+        <br>
+        <br>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" #password="ngModel" ngModel placeholder="Enter Password" name="password" required>
+        <br>
+        <br>
+
+        <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+          </label>
+          <br>
+          <br>
+    
+        <!-- <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+        <br>
+        <br> -->
+    
+       
+    
+        <!-- <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+        <br>
+        <br>
+     -->
+        <div class="clearfix">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn">Sign Up</button>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <mat-form-field>
+        <input type="text" username="username" #username="ngModel"  ngModel placeholder="Enter Username">
     </mat-form-field>
+    <br>
+   
+    <mat-form-field>
+        <input type="text" mobile="mobile" #mobile="ngModel" ngModel placeholder="Enter Mobile number">
+     </mat-form-field> 
+     <br>
 
    <mat-form-field>
-       <input matInput >
-   </mat-form-field>
+       <input type="text" email="email" #email="ngModel" ngModel placeholder="Enter Email">
+    </mat-form-field>
+    <br> 
+
+    <mat-form-field>
+        <input type="text" password="password" #password="ngModel" ngModel placeholder="Enter Password">
+     </mat-form-field> 
+     <br>
+
+     <mat-form-field>
+        <input type="text" password="password" #password="ngModel" ngModel placeholder="Repeat Password">
+     </mat-form-field> 
+     <br>
+
+
+     <mat-form-field>
+        <input type="text" address="address" #address="ngModel" ngModel placeholder="Enter Address">
+     </mat-form-field> 
+     <br>
+
+     <mat-form-field>
+        <input type="text" zipcode="zipcode" #zipcode="ngModel" ngModel placeholder="Enter Zipcode">
+     </mat-form-field> 
+     <br>
+
+    
+      <button mat-raised-button color="warn" type="submit">Add Product</button> -->
+    </form>
+
+
+    
+   
+    

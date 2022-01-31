@@ -14,7 +14,7 @@ export class AdminService {
  
 
   addUser=(user:User):Observable<User>=>{
-    return this._http.post<User>(this._baseurl1,user);
+    return this._http.post<User>(this._baseurl1+'/add-user',user);
   }
 }
 
