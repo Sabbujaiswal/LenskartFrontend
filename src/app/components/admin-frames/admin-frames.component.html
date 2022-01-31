@@ -1,0 +1,28 @@
+<div class="container-1">
+    <h1 class="heading">
+      Explore based on  
+    </h1>
+    <mat-select matInput class="sel-container" (valueChange)="changeValue($event)" [(value)]="selected"
+      placeholder="Mode">
+      <mat-option *ngFor="let option of options" [value]="option">{{option.title}}</mat-option>
+    </mat-select>
+    <form #form="ngForm" (ngSubmit)="onSubmitForm(form)">
+      <input type="search" name="search" placeholder={{searchOption}} #search="ngModel" ngModel class="search-container"/>
+      <button type="submit" class="search-btn">Search</button>
+    </form>
+  </div>
+  
+  <div class="container">
+    <mat-card *ngFor="let frame of frames" class="frame-container">
+      <mat-card-header class="title">{{frame.name}}</mat-card-header>
+      <img mat-card-md-image src="{{frame.frameImg}}" class="img-container">
+      <mat-card-content class="price"> <span class="rupees">Rs: </span>{{frame.price}}/-</mat-card-content>
+      <mat-card-actions>
+        <button mat-button color='primary' (click)='onSubmit(frame)' class="view-button"> ViewMore <mat-icon>
+            arrow_forward_ios</mat-icon></button>
+      </mat-card-actions>
+      <mat-card-actions>
+          <button mat-button class="del-btn" (click)="onDelete(frame)">Delete</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>

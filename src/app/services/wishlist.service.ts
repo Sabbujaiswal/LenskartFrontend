@@ -21,8 +21,13 @@ export class WishlistService {
   addToWishlist(frame: any) {
     this.wishList.push(frame);
     this.framesList.next(this.wishList);
-   
     console.log(this.wishList);
+  }
+  
+
+  removeFrame(frame:any){
+    this.wishList.removes(frame);
+    this.framesList.next(this.wishList)
   }
 
   

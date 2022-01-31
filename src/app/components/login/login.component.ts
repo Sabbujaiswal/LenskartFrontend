@@ -14,7 +14,7 @@ import { UserserviceService } from 'src/app/services/userservice.service';
 export class LoginComponent implements OnInit {
   
   user!: User;
-  //public loginForm!:FormGroup;
+  public loginForm!:FormGroup;
   //loginDetails: any = {mobile:'',password:'',email:'',password1:''};
   //errorMessage!:string;
   

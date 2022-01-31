@@ -4,24 +4,11 @@
         <mat-card-title [ngStyle]="{'color':'black'}">Brand : {{frame.brand.brandName.toUpperCase()}} </mat-card-title>
         <br>
         <mat-card-content class="size">$ize: {{frame.frameSize}} </mat-card-content><br>
-
         <img src="{{frame.frameImg}}" class="image1" />
         <div class="r-container">
             <mat-card-content class="rating">Rating: {{frame.rating}} <mat-icon class="star">grade</mat-icon>
             </mat-card-content>
             <mat-card-content>Rs. {{frame.price}}/-</mat-card-content>
-
         </div>
-
-        <div class="btn-container">
-            <mat-card-actions>
-                <button mat-raised-button color='primary' (click)="addToBasket(frame)">Add to Basket</button>
-            </mat-card-actions>
-            <mat-card-actions>
-                <button mat-raised-button color='primary' (click)="addToWishlist(frame)">Add to Wishlist</button>
-            </mat-card-actions>
-
-        </div>
-
     </mat-card>
 </mat-card>

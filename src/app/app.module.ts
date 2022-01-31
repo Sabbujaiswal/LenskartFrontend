@@ -25,7 +25,10 @@ import { DeleteFrameComponent } from './components/delete-frame/delete-frame.com
 import { EndComponent } from './components/end/end.component';
 import { BasketComponent } from './components/basket/basket.component';
 import { FrameChoiceComponent } from './components/frame-choice/frame-choice.component';
+import { AdminComponent } from './components/admin/admin.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { DetailsComponent } from './components/details/details.component';
+import { AdminFramesComponent } from './components/admin-frames/admin-frames.component';
 
 
 @NgModule({
@@ -48,7 +51,10 @@ import { SignupComponent } from './components/signup/signup.component';
     EndComponent,
     BasketComponent,
     FrameChoiceComponent,
-    SignupComponent
+    AdminComponent,
+    SignupComponent,
+    DetailsComponent,
+    AdminFramesComponent
     
   ],
   imports: [

@@ -69,3 +69,42 @@
 
 
 }
+.message-container{
+    background-image: url(../../../assets/gifs/hcart.jpg);
+    background-size: cover;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.message{
+    font-size: 30px;
+    margin-left: 20px;
+   margin-top: 100px;
+    
+
+}
+
+.span{
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.view-button{
+    font-size: 20px;
+}
+.btn{
+    background-color: #224eaf;
+    color: white;
+}
+.total-price{
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}

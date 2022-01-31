@@ -69,3 +69,29 @@
 
 
 }
+.message-container{
+    /* background-image: url(../../../assets/gifs/hcart.jpg); */
+    background-size: cover;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.message{
+    font-size: 30px;
+    margin-left: 20px;
+   margin-top: 100px;
+    
+
+}
+
+.span{
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.btn{
+    margin-left:120px;
+
+}

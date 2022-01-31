@@ -28,10 +28,18 @@ export class BasketService {
   getTotalPrice(): number {
     let grandTotal = 0;
     this.basketItemList.map((frame: any) => {
-      grandTotal += frame.total;
+      grandTotal += frame.price;
     })
     return grandTotal;
   }
 
+  removeFrame(frame:any){
+   this.basketItemList.map((f:any,index:any)=>{
+     if (frame.frameId==f.frameId){
+       this.basketItemList.splice(index,1);
+     }
+   })
+   this.framesList.next(this.basketItemList);
+  }
 
 }
