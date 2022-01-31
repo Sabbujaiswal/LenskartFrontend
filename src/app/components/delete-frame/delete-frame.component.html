@@ -1,1 +1,12 @@
-<p>delete-frame works!</p>
+
+<h1>Delete Frame</h1>
+<form #form="ngForm" (ngSubmit)="onSubmitForm(form)" >
+    <input type="text" name="frameId" placeholder="Enter Id of the frame" #frameId="ngModel" ngModel  >
+<button type="submit">Delete</button>
+</form>
+
+
+
+
+
+

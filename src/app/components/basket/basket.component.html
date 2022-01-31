@@ -1,10 +1,24 @@
+<div class="message-container" *ngIf="frames.length==0">
+<div >
+  <p class="message"> Hey it's already late  </p>
+  <p class="span"> hurry up</p>
+<p class="span">and add Frames to your cart </p>
+</div>
+</div>
+<p class="total-price">Total Price: {{total}}/-</p>
 <div class="container">
-    <mat-card *ngFor="let frame of frames" class="frame-container">
-      <mat-card-header class="title">{{frame.name}}</mat-card-header>
-      <img mat-card-md-image src="{{frame.frameImg}}" class="img-container">
-      <mat-card-content class="price"> <span class="rupees">Rs: </span>{{frame.price}}</mat-card-content>
-      <mat-card-actions>
-      </mat-card-actions>
-    </mat-card>
-  </div> 
-  
+  <mat-card *ngFor="let frame of frames" class="frame-container">
+    <mat-card-header class="title">{{frame.name}}</mat-card-header>
+    <img mat-card-md-image src="{{frame.frameImg}}" class="img-container">
+    <mat-card-content class="price"> <span class="rupees">Rs: </span>{{frame.price}}</mat-card-content>
+    <mat-card-actions>
+      <button mat-button color='primary' (click)='onSubmit(frame)' class="view-button"> ViewMore <mat-icon>
+          arrow_forward_ios</mat-icon></button>
+    </mat-card-actions>
+   <mat-card-actions>
+    <button mat-button  class="btn" (click)="remove(frame)" >Remove</button>
+   </mat-card-actions>
+    <mat-card-actions>
+    </mat-card-actions>
+  </mat-card>
+</div>

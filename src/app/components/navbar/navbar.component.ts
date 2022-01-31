@@ -32,7 +32,7 @@ export class NavbarComponent implements OnInit {
     this._basketService.getFrames().subscribe(data => {
       this.length2 = data.length
     })
-    
+
 
 
   }
@@ -53,7 +53,7 @@ export class NavbarComponent implements OnInit {
 
     // if (!this._loginService.isUserLoggedIn()) {
     //   let user = this._router.navigate(['/login'])
-      
+
 
     // }
 
@@ -61,11 +61,16 @@ export class NavbarComponent implements OnInit {
     this.count += 1;
     if (this._loginService.countOfLoginPage == 0 && this.logStatus == "Login/SignUp") {
       let user = this._router.navigate(['/login'])
-      
+
       //console.log("Hi")
       // console.log(this._loginService.countOfLoginPage+=1)
-      
 
+      setTimeout(() => {
+        if (this._loginService.countOfLoginPage == 1) {
+          this.logStatus = "LogOut"
+
+        }
+      }, 10000)
 
     }
 

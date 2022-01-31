@@ -24,7 +24,7 @@ export class SampleFramesComponent implements OnInit {
       this._frameService.getAllFrames().subscribe({
         next: (data) => {
 
-          for (let i = 1; i <= 6; i++) {
+          for (let i = 1; i <= 10; i++) {
             console.log(i)
             this.frames.push(data[i])
            // console.log(data[i])

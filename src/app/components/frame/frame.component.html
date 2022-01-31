@@ -16,7 +16,7 @@
   <mat-card *ngFor="let frame of frames" class="frame-container">
     <mat-card-header class="title">{{frame.name}}</mat-card-header>
     <img mat-card-md-image src="{{frame.frameImg}}" class="img-container">
-    <mat-card-content class="price"> <span class="rupees">Rs: </span>{{frame.price}}</mat-card-content>
+    <mat-card-content class="price"> <span class="rupees">Rs: </span>{{frame.price}}/-</mat-card-content>
     <mat-card-actions>
       <button mat-button color='primary' (click)='onSubmit(frame)' class="view-button"> ViewMore <mat-icon>
           arrow_forward_ios</mat-icon></button>

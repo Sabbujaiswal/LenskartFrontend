@@ -5,7 +5,6 @@
     border-width: 2px;
     border-color: #124292;
 
-
 }
 .container{
     display: flex;
@@ -61,6 +60,10 @@
     height: 30px;
     width: 270px;
     border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkmagenta;
+    background-color: white;
 }
 .container-1{
     display: flex;
@@ -69,42 +72,51 @@
 
 
 }
-.message-container{
-    background-image: url(../../../assets/gifs/hcart.jpg);
-    background-size: cover;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    
-
-}
-.message{
-    font-size: 30px;
+.search-input{
     margin-left: 20px;
-   margin-top: 100px;
-    
+    height: 30px;
+    width: 400px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    padding:10px ;
+}
+.button{
+    margin: 10px;
 
 }
-
-.span{
-    font-size: 30px;
-    margin-left: 20px;
-    margin-top: 10px;
-}
-
-.view-button{
-    font-size: 20px;
-}
-.btn{
-    background-color: #224eaf;
+.search-btn{
+    height: 30px;
+    width: 120px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: #4e3af3;
     color: white;
-}
-.total-price{
-    margin-top: 20px;
-    margin-right: 20px;
-    font-size: 25px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    border-style: none;
 
+}
+
+.heading{
+    font-size: 20px;
+    margin-right: 10px;
+    font-family: serif;
+    font-weight: 300;
+
+}
+.search-container{
+    height: 30px;
+    width: 270px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkmagenta;
+    background-color: white;
+    margin-left: 10px;
+
+}
+
+
+.del-btn{
+    color: white;
+    background-color: crimson;
 }

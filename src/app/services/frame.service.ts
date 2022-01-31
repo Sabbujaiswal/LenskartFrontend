@@ -30,6 +30,8 @@ getByLessPrice=(price:number):Observable<Frame[]>=>{
   return this.http.get<Frame[]>(url);
 }
 
+
+
 // getDistinctCategory=():Observable<string[]>=>{
 //   let url=`${this._baseurl}/category/distinct`;
 

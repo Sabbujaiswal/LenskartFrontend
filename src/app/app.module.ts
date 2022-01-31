@@ -27,6 +27,8 @@ import { BasketComponent } from './components/basket/basket.component';
 import { FrameChoiceComponent } from './components/frame-choice/frame-choice.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { DetailsComponent } from './components/details/details.component';
+import { AdminFramesComponent } from './components/admin-frames/admin-frames.component';
 
 
 @NgModule({
@@ -50,7 +52,9 @@ import { SignupComponent } from './components/signup/signup.component';
     BasketComponent,
     FrameChoiceComponent,
     AdminComponent,
-    SignupComponent
+    SignupComponent,
+    DetailsComponent,
+    AdminFramesComponent
     
   ],
   imports: [

@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Frame } from 'src/app/models/frame';
+import { AdminService } from 'src/app/services/admin.service';
 import { FrameService } from 'src/app/services/frame.service';
 
-
 @Component({
-  selector: 'app-frame',
-  templateUrl: './frame.component.html',
-  styleUrls: ['./frame.component.css']
+  selector: 'app-admin-frames',
+  templateUrl: './admin-frames.component.html',
+  styleUrls: ['./admin-frames.component.css']
 })
-export class FrameComponent implements OnInit {
+export class AdminFramesComponent implements OnInit {
+
   userSearch = ''
   searchOption = 'Search '
   selected = 'domain';
@@ -24,7 +25,7 @@ export class FrameComponent implements OnInit {
   ]
   frames: Frame[] = []
   choice = ''
-  constructor(private _frameService: FrameService, private _router: Router, private _activatedRoute: ActivatedRoute) { }
+  constructor(private _frameService: FrameService, private _router: Router, private _activatedRoute: ActivatedRoute,private _adminServices:AdminService) { }
 
   ngOnInit(): void {
     console.log(this.userSearch)
@@ -39,9 +40,10 @@ export class FrameComponent implements OnInit {
         error: error => console.log(error),
         // complete:()=>console.log('completed')
       })
-
+     
 
     });
+    
   }
 
   onSubmit = (frame: Frame) => {
@@ -97,18 +99,16 @@ export class FrameComponent implements OnInit {
       }
 
     })
-
-
-
-
-
-
-
-
-
     //this.frames=data.filter(t=>{t.categories.forEach(cat=>{cat.categoryName.toLowerCase()=="reading"
     //  console.log(cat.categoryName.toLowerCase())})})
     console.log(this.frames)
 
   }
+  onDelete=(frame:Frame)=>{
+    const frameId=frame.frameId;
+    this._adminServices.deleteById(frameId).subscribe(data=>this.ngOnInit())
+    
+
+  }
+  
 }

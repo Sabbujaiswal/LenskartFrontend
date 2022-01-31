@@ -1,1 +1,12 @@
-<p>add-frame works!</p>
+<h1 [ngStyle]="{'text-align':'center'}">Add Frame</h1>
+<form #addForm='ngForm' (ngSubmit)="onAdd(addForm)">
+ 
+    <mat-form-field>
+        <input class="mat-input" type="text" name='name' #name="ngModel" ngModel placeholder="Enter Frame Name">
+    </mat-form-field>
+    <mat-form-field>
+        <input class="mat-input" type="text" name='name' #name="ngModel" ngModel placeholder="Enter Frame Name">
+    </mat-form-field>
+    
+
+</form>
