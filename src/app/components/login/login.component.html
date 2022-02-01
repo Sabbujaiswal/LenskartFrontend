@@ -2,51 +2,11 @@
     <mat-toolbar >Login</mat-toolbar>
     <mat-card>
       <mat-tab-group>
-        <mat-tab label="Mobile No.">
-          <form
-            class="form-style"
-            #loginForm="ngForm"
-            (ngSubmit)="onLoginWithMobile()"
-          >
-            <mat-form-field appearance="outline">
-              <mat-label>Mobile Number</mat-label>
-              <input
-                matInput
-                placeholder="Enter mobile number"
-                #mobile="ngModel"
-                name="mobile"
-                ngModel
-              />
-              <!-- <span class="text-danger" *ngIf="loginForm.controls['mobile'].dirty && loginForm.hasError('required','mobile')">*Please Enter valid number</span> -->
-              <!-- <mat-hint>Hint</mat-hint> -->
-            </mat-form-field>
-  
-            <mat-form-field appearance="outline">
-              <mat-label>Password</mat-label>
-              <input
-                type="password"
-                matInput
-                placeholder="Enter password"
-                #password_mob="ngModel"
-                name="password"
-                ngModel
-              />
-              <!-- <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*password is mandatory</span> -->
-
-              <!-- <mat-hint>Hint</mat-hint> -->
-            </mat-form-field>
-  
-            <button type="submit" mat-flat-button color="primary">Sign In</button>
-            <br>
-            <button type="submit" mat-flat-button color="primary">Sign Up</button>
-
-          </form>
-        </mat-tab>
            <mat-tab label="Email">
           <form
             class="form-style"
             #form="ngForm"
-            (ngSubmit)="onLoginWithEmail()"
+            (ngSubmit)="onLoginWithEmail(form)"
           >
             <mat-form-field appearance="outline">
               <mat-label for="username">Email</mat-label>
@@ -56,7 +16,7 @@
                 placeholder="Enter Email"
                 #email="ngModel"
                 name="email"
-                ngModel
+                ngModel 
               />
               <!-- <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*Email ID is Required</span> -->
 
@@ -76,15 +36,16 @@
               <!-- <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Please Enter Password</span> -->
 
 
-               <mat-hint>Hint</mat-hint> -->
+               <mat-hint>Hint</mat-hint>
              </mat-form-field>
   
             <button type="submit" mat-flat-button color="primary">Sign In</button>
             <br>
-            <button type="submit" mat-flat-button color="primary">Sign Up</button> 
+            <button  mat-flat-button color="primary" (click)="onSignUp()" >Sign Up</button>
+            <br>
 
            </form>
         </mat-tab>  
       </mat-tab-group>
     </mat-card>
-  </div>
+  </div>  
