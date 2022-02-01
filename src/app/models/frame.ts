@@ -8,7 +8,7 @@ export interface Frame {
     name: string;
     frameSize: string;
     color: string;
-    shopby: string;
+    gender: string;
     price: number;
     lens: Lens;
     rating: number;

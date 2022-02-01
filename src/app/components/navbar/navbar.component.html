@@ -4,7 +4,7 @@
   <mat-icon class="phone-icon">phone_in_talk</mat-icon>
   <span>1800-111-111</span>
   <mat-icon class="spacer" routerLink="./home">home</mat-icon>
-  <mat-icon routerLink="/admin">security</mat-icon>
+  <mat-icon routerLink="/admin-login">security</mat-icon>
 
   <!-- <mat-icon> <img src="assets/gifs/adminicon.png" class="admin-icon"> </mat-icon> -->
   <button (click)="onClickFrames()" class="frames" mat-button>Frames</button>
@@ -17,7 +17,7 @@
   <button mat-button class="cart-title" (click)="onClickBasket()">Cart</button>
   <!-- <button   class="font-size" mat-button >BasKet</button> -->
   <mat-icon class="small-space"> person_pin</mat-icon>
-  <button class="font-size" (click)="login()" mat-button>{{logStatus}}</button>
+  <button class="font-size" (click)="login()" mat-button>{{nlogStatus}}</button>
   <!-- <span routerLink="/end" [ngStyle]="{'height':'10px','width':'20px','font-size':'15px','margin-bottom':'20px'}" >LogOut</span> -->
 
 

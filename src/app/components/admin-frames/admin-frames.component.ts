@@ -50,10 +50,16 @@ export class AdminFramesComponent implements OnInit {
     //  console.log(frame)
     this._router.navigate(['/frame-details', frame.frameId]);
   };
-  changeValue(value: any) {
-    this.searchOption = value.searchContent
-    this.choice = value.title.toLowerCase()
-    console.log(this.choice)
+  changeValue(e: any) {
+    // console.log(e.target.value)
+    for (let item of this.options){
+      if(e.target.value.toLowerCase()===item.title.toLowerCase()){
+        this.searchOption = item.searchContent
+        this.choice = item.title.toLowerCase()
+        // console.log("Hi")
+      }
+    }
+  
   }
   showFrames = () => {
 

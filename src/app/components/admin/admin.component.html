@@ -1,6 +1,6 @@
 
-<mat-toolbar [ngStyle]="{'background-color':'white'}">
-    <button mat-button *ngFor="let tab of tabs" [ngStyle]="{'color':'black'}" routerLink="{{tab.route}}"
+<mat-toolbar class="nav-container">
+    <button mat-button *ngFor="let tab of tabs" [ngStyle]="{'color':'white'}" routerLink="{{tab.route}}"
         routerLinkActive="{{tab.active}}">
         {{tab.label}}
     </button>

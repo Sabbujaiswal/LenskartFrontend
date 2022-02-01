@@ -1,4 +1,4 @@
-<h1 [ngStyle]="{'text-align':'center'}">Add Frame</h1>
+<!-- <h1 [ngStyle]="{'text-align':'center'}">Add Frame</h1>
 <form #addForm='ngForm' (ngSubmit)="onAdd(addForm)">
  
     <mat-form-field>
@@ -9,4 +9,82 @@
     </mat-form-field>
     
 
+</form> -->
+
+
+<h1 [ngStyle]="{'text-align':'center'}">Add Frame</h1>
+<form #addForm="ngForm" (ngSubmit)="onAdd(addForm)">
+    <div class="container">
+        <p> Fill the form to add a Frame</p>
+        <hr>
+
+        <label for="name"><b>Frame name</b></label>
+        <input type="text" #name="ngModel" ngModel placeholder="Enter frame Name" name="name" required>
+        <br>
+        <br>
+
+        <label for="frameSize"><b>FrameSize</b></label>
+        <input type="text" #frameSize="ngModel" ngModel placeholder="Enter FrameSize" name="frameSize" required>
+        <br>
+        <br>
+
+        <label for="color"><b>Color</b></label>
+        <input type="text" #color="ngModel" ngModel placeholder="Enter color" name="color" required>
+        <br>
+        <br>
+
+        <label for="gender"><b>Shop By</b></label>
+        <input type="text" #gender="ngModel" ngModel placeholder="Enter ShopBy(MEN,WOMEN,KID,UNISEX)" name="gender"
+            required>
+        <br>
+        <br>
+
+        <label for="price"><b>Price</b></label>
+        <input type="text" #price="ngModel" ngModel placeholder="Enter price" name="price" required>
+        <br>
+        <br>
+
+        <div ngModelGroup="lens">
+            <label for="brand"> <b>Lens Brand</b> </label>
+            <input type="text" #brand="ngModel" ngModel placeholder="Enter brand" name="brand" required>
+            <br>
+            <label for="lensPower"> <b> LensPower</b> </label>
+            <input type="text" #lensPower="ngModel" ngModel placeholder="Enter lensPower" name="lensPower" required>
+            <br>
+        </div>
+        <label for="rating"><b>rating</b></label>
+        <input type="text" #rating="ngModel" ngModel placeholder="Enter rating" name="rating" required>
+        <br>
+        <br>
+        <div ngModelGroup="brand">
+            <label for="shape"> <b>Lens shape</b> </label>
+            <input type="text" #shape="ngModel" ngModel placeholder="Enter shape" name="shape" required>
+            <br>
+            <label for="type"> <b>Lens Type</b> </label>
+            <input type="text" #type="ngModel" ngModel placeholder="Enter type" name="type" required>
+            <br>
+            <label for="brandName"> <b>Frame BrandName</b> </label>>
+            <input type="text" #brandName="ngModel" ngModel placeholder="Enter brandName" name="brandName" required>
+            <br>
+        </div>
+        <label for="frameImg"> <b>FrameImg</b> </label>
+        <input type="text" #frameImg="ngModel" ngModel placeholder="Enter frameImg" name="frameImg" required>
+        <br>
+
+        <div ngModelGroup="categories" *ngIf="categories.length">
+            <select>
+                <label>Categories</label>
+                <option *ngFor="let category of categories">
+                    {{category.categoryName}}
+
+                </option>
+            </select>
+
+        </div>
+
+    </div>
+<div class="btn-container">
+<button type="submit" class="add-btn">Add Frame</button>
+
+</div>
 </form>
