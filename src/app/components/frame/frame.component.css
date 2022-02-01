@@ -25,6 +25,8 @@
     color: black;
     margin-top: 10px;
     font-family: 'Roboto';
+    font-size: 20px;
+
 }
 .rupees{
     font-size: 20px;
@@ -129,4 +131,18 @@
 }
 .option{
     height: 70px;
+}
+.btn-container{
+    display: flex;
+    align-self: flex-end;
+    align-items: flex-end;
+    justify-content: flex-end;
+  
+    
+}
+.btn{
+    background-color: #224eaf;
+    color: white;
+    height: 60px;
+    width: 120px;
 }

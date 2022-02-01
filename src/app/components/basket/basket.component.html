@@ -1,12 +1,15 @@
 <div class="message-container" *ngIf="frames.length==0">
+<p class="total-price">Total Price: {{total}}/-</p>
 <div >
   <p class="message"> Hey it's already late  </p>
   <p class="span"> hurry up</p>
 <p class="span">and add Frames to your cart </p>
+<button routerLink="/frame" class="back-btn">Back</button>
+
 </div>
 </div>
-<p class="total-price">Total Price: {{total}}/-</p>
-<div class="container">
+<div class="container" *ngIf="frames.length!=0">
+<p class="total-price"  >Total Price: {{total}}/-</p>
   <mat-card *ngFor="let frame of frames" class="frame-container">
     <mat-card-header class="title">{{frame.name}}</mat-card-header>
     <img mat-card-md-image src="{{frame.frameImg}}" class="img-container">
@@ -21,4 +24,8 @@
     <mat-card-actions>
     </mat-card-actions>
   </mat-card>
+  <div class="btn-container">
+    <button routerLink="/frame" class="back-btn">Back</button>
+    
+        </div>
 </div>

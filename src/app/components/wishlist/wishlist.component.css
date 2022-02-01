@@ -70,28 +70,55 @@
 
 }
 .message-container{
-    /* background-image: url(../../../assets/gifs/hcart.jpg); */
+    background-image: url("https://www.watsons.ae/images/svg/empty-cart-xs.svg");
     background-size: cover;
-    height: 90%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
     
 
 }
 .message{
-    font-size: 30px;
+    font-size: 40px;
     margin-left: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
    margin-top: 100px;
+   color: #171580;
+   font-style: italic;
+
+
     
 
 }
 
 .span{
-    font-size: 30px;
+    font-size:40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-left: 20px;
-    margin-top: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    font-style: italic;
+    color: #171580;
+
 }
 .btn{
     margin-left:120px;
+    
 
+}
+.back-btn{
+    background-color: #124292;
+    color: white;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    
+}
+
+.sm-container{
+    margin-right: 40px;
 }
