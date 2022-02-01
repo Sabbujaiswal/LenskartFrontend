@@ -5,33 +5,44 @@
         <p>Please fill in this form to create an account.</p>
         <hr>
 
-        <label for="username"><b>Username</b></label>
-        <input type="text" #userName="ngModel" ngModel placeholder="Enter User Name" name="userName" required>
+        <label for="username"><b>Username*</b></label>
+        <input type="text" #username="ngModel" ngModel placeholder="Enter User Name" name="username" required>
+        <mat-label *ngIf="username.touched&&username.pristine" [ngStyle]="{'color':'red'}">  Username is required</mat-label>
+
         <br>
         <br>
 
-        <label for="mobile"><b>Mobile</b></label>
+        <label for="mobile"><b>Mobile*</b></label>
         <input type="text" #mobile="ngModel" ngModel placeholder="Enter Mobile Number" name="mobile" required>
+        <mat-label *ngIf="mobile.touched&&mobile.pristine" [ngStyle]="{'color':'red'}">  Mobile Number is required</mat-label>
         <br>
         <br>
 
-        <label for="address"><b>Address</b></label>
+        <label for="address"><b>Address*</b></label>
         <input type="text" #address="ngModel" ngModel placeholder="Enter Address" name="address" required>
+        <mat-label *ngIf="address.touched&&address.pristine" [ngStyle]="{'color':'red'}">  Address is required</mat-label>
+
         <br>
         <br>
 
-        <label for="zipcode"><b>Zipcode</b></label>
+        <label for="zipcode"><b>Zipcode*</b></label>
         <input type="text" #zipcode="ngModel" ngModel placeholder="Enter Zipcode" name="zipcode" required>
+        <mat-label *ngIf="zipcode.touched&&zipcode.pristine" [ngStyle]="{'color':'red'}">  zipcode is required</mat-label>
+
         <br>
         <br>
 
         <label for="email"><b>Email</b></label>
         <input type="text" #email= "ngModel" ngModel placeholder="Enter Email" name="email" required>
+        <mat-label *ngIf="email.touched&&email.pristine" [ngStyle]="{'color':'red'}">  Email is required</mat-label>
+
         <br>
         <br>
     
         <label for="psw"><b>Password</b></label>
-        <input type="password" #password="ngModel" ngModel placeholder="Enter Password" name="password" required>
+        <input type="password" #password="ngModel" ngModel placeholder="Enter Password" name="psw" required>
+        <mat-label *ngIf="password.touched&&password.pristine" [ngStyle]="{'color':'red'}">  Password is required</mat-label>
+
         <br>
         <br>
 
@@ -53,7 +64,7 @@
         <br>
      -->
         <div class="clearfix">
-          <button type="button" class="cancelbtn"routerLink="/login">Cancel</button>
+          <button type="button" class="cancelbtn">Cancel</button>
           <button type="submit" class="signupbtn">Sign Up</button>
         </div>
       </div>

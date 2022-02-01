@@ -41,3 +41,18 @@
      height:50%;
      width:100%;
  }
+ .image{
+     background-image: url("https://static1.lenskart.com/media/desktop/img/Nov20/25-Nov/DeskSleekSteel_9thDec21.jpg");
+     height:70%;
+     width:100%;
+ }
+ .btn{
+     margin-top: 350px;
+     background-color: black;
+    color: white;
+    height:60px;
+    width: 182px;
+    margin-left: 217px;
+    font-size: 20px;
+}
+
