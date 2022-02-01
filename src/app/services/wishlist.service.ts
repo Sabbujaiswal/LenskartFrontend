@@ -23,12 +23,25 @@ export class WishlistService {
     this.framesList.next(this.wishList);
     console.log(this.wishList);
   }
-  
+
 
   removeFrame(frame:any){
-    this.wishList.removes(frame);
+  //  this.basketItemList.map((f:any,index:any)=>{
+  //    if (frame.frameId==f.frameId){
+  //      this.basketItemList.splice(index,1);
+  //    }
+  //  })
+  //  this.framesList.next(this.basketItemList);
+    this.wishList.map((f:any,index:any)=>{
+      if (frame.frameId===f.frameId){
+        this.wishList.splice(index,1)
+      }
+    })
     this.framesList.next(this.wishList)
-  }
+
+
+}
+  
 
   
 }

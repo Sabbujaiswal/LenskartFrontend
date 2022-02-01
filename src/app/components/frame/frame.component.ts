@@ -11,9 +11,10 @@ import { FrameService } from 'src/app/services/frame.service';
   styleUrls: ['./frame.component.css']
 })
 export class FrameComponent implements OnInit {
+  foods=['jilebi','h','u']
   userSearch = ''
   searchOption = 'Search '
-  selected = 'domain';
+  selected = '';
   nframes: Frame[] = []
   options = [
     { id: 1, title: 'Brand', searchContent: 'Search based on brand' },
@@ -48,10 +49,16 @@ export class FrameComponent implements OnInit {
     //  console.log(frame)
     this._router.navigate(['/frame-details', frame.frameId]);
   };
-  changeValue(value: any) {
-    this.searchOption = value.searchContent
-    this.choice = value.title.toLowerCase()
-    console.log(this.choice)
+  changeValue(e: any) {
+    // console.log(e.target.value)
+    for (let item of this.options){
+      if(e.target.value.toLowerCase()===item.title.toLowerCase()){
+        this.searchOption = item.searchContent
+        this.choice = item.title.toLowerCase()
+        // console.log("Hi")
+      }
+    }
+  
   }
   showFrames = () => {
 

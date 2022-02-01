@@ -20,4 +20,8 @@ export class UserserviceService {
     let url=`${this._baseurl1}/mobile/${mobile}/password/${password}`;
     return this.http.get<User>(url);
   }
+  getAllUsers=():Observable<User[]>=>{
+    let url=`${this._baseurl1}/all-users`;
+    return this.http.get<User[]>(url);
+  }
 }

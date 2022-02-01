@@ -12,7 +12,7 @@ import { WishlistService } from 'src/app/services/wishlist.service';
 export class WishlistComponent implements OnInit {
   frames:Frame[]=[]
   total:number=0;
-  constructor(private _wishlistService:WishlistService,private _router:Router) { }
+  constructor(private _wishlistService:WishlistService,private _router:Router,private _basketService:BasketService) { }
 
   ngOnInit(): void {
     this._wishlistService.getFrames().subscribe(data=>{
@@ -27,13 +27,15 @@ export class WishlistComponent implements OnInit {
     this._router.navigate(['/details', frame.frameId]);
   };
   
-  addToWishList=(frame:Frame)=>{
-    this._wishlistService.addToWishlist(frame);
-    
- }
+  
  remove=(frame:Frame)=>{
    this._wishlistService.removeFrame(frame);
    
  }
+ addToBasket=(frame:Frame)=>{
+  this._basketService.addToBasket(frame);
+  this._wishlistService.removeFrame(frame);
+  
+}
 
 }

@@ -1,51 +1,30 @@
 <div class="container">
-    <mat-toolbar >Login</mat-toolbar>
-    <mat-card>
-      <mat-tab-group>
-           <mat-tab label="Email">
-          <form
-            class="form-style"
-            #form="ngForm"
-            (ngSubmit)="onLoginWithEmail(form)"
-          >
-            <mat-form-field appearance="outline">
-              <mat-label for="username">Email</mat-label>
-              <input
-                matInput
-                type="email"
-                placeholder="Enter Email"
-                #email="ngModel"
-                name="email"
-                ngModel 
-              />
-              <!-- <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*Email ID is Required</span> -->
+  <mat-card>
+    <mat-tab-group>
+      <mat-tab label="Email">
+        <form class="form-style" #loginForm="ngForm" (ngSubmit)="onLoginWithEmail(loginForm)" novalidate>
+          <mat-form-field appearance="outline">
+            <mat-label for="username">Email</mat-label>
+            <input matInput type="email" required placeholder="Enter Email" #email="ngModel" name="email" ngModel /><br>
+            <mat-label *ngIf="email.touched&&email.pristine" [ngStyle]="{'color':'red'}">  is required</mat-label>
+          </mat-form-field>
 
-            </mat-form-field>
-  
-            <mat-form-field appearance="outline">
-              <mat-label>Password</mat-label>
-              <input
-                type="password"
-                matInput
-                placeholder="Enter password"
-                #password="ngModel"
-                name="password"
-                ngModel
-
-              />
-              <!-- <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Please Enter Password</span> -->
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="Enter password" #password="ngModel" name="password" ngModel required/>
+            <mat-label *ngIf="password.touched&&password.pristine" [ngStyle]="{'color':'red'}">  is required</mat-label>
 
 
-               <mat-hint>Hint</mat-hint>
-             </mat-form-field>
-  
-            <button type="submit" mat-flat-button color="primary">Sign In</button>
-            <br>
-            <button  mat-flat-button color="primary" (click)="onSignUp()" >Sign Up</button>
-            <br>
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
 
-           </form>
-        </mat-tab>  
-      </mat-tab-group>
-    </mat-card>
-  </div>  
+          <button type="submit" mat-flat-button color="primary" [disabled]="!loginForm.valid">Sign In</button>
+          <br>
+          <button mat-flat-button color="primary" (click)="onSignUp()"  >Sign Up</button>
+          <br>
+
+        </form>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+</div>

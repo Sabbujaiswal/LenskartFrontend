@@ -58,7 +58,7 @@
 }
 .sel-container{
     height: 30px;
-    width: 270px;
+    max-width: 270px;
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
@@ -101,6 +101,8 @@
     margin-right: 10px;
     font-family: serif;
     font-weight: 300;
+   
+
 
 }
 .search-container{
@@ -115,4 +117,15 @@
 
 }
 
+.select-option{
+    height: 30px;
+    width: 300px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: darkmagenta;
 
+}
+.option{
+    height: 70px;
+}

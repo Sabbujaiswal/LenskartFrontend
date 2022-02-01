@@ -29,6 +29,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { DetailsComponent } from './components/details/details.component';
 import { AdminFramesComponent } from './components/admin-frames/admin-frames.component';
+import { UsersComponent } from './components/users/users.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { AdminFramesComponent } from './components/admin-frames/admin-frames.com
     AdminComponent,
     SignupComponent,
     DetailsComponent,
-    AdminFramesComponent
+    AdminFramesComponent,
+    UsersComponent
     
   ],
   imports: [
