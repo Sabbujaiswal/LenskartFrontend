@@ -34,7 +34,8 @@ import { MatBadgeModule } from "@angular/material/badge";
     MatIconModule,
     MatTabsModule,
     MatCardModule,
-    MatBadgeModule
+    MatBadgeModule,
+    CommonModule
   ]
 })
 export class MaterialModule { }

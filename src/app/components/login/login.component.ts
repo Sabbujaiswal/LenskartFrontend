@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
       let url = params.get('returnUrl');
       console.log(url);
       if (url) {
-        alert('invalid crendentials');
+        
         this.returnUrl = url;
       }
     })
@@ -41,18 +41,35 @@ export class LoginComponent implements OnInit {
 
   };
 
-  onLoginWithEmail = (form: NgForm) => {
-    let nuser = form.value;
-    console.log(nuser)
-    this._userService
-      .getUserByEmailAndPassword(nuser.email, nuser.password)
-      .subscribe((data) => {
-        // console.log(data);
-        this.user = data;
-        this._router.navigate(['/frame']);
-      });
-    this._loginService.countOfLoginPage += 1
+  // onLoginWithEmail = (form: NgForm) => {
+  //   let nuser = form.value;
+  //   console.log(nuser)
+  //   this._userService
+  //     .getUserByEmailAndPassword(nuser.email, nuser.password)
+  //     .subscribe((data) => {
+  //       if(!data){
+  //       alert("Invalid credential")
+  //     console.log("Not found")}
+  //       else
+  //       // console.log(data);
+  //       this.user = data;
+  //       this._router.navigate(['/frame']);
+  //     });
+  //   this._loginService.countOfLoginPage += 1
 
+  // }
+  onLoginWithEmail = (loginForm: NgForm) => {
+    let user = loginForm.value;
+    
+    this._userService.getUserByEmailAndPassword(user.email, user.password).subscribe(response => {
+      if (!response) {
+        alert('Invalid credentials');
+        this._router.navigate(['/login'])
+      }
+      else{
+        this._router.navigate(['/frame'])
+      }
+    })
   }
   onSignUp=()=>{
     this._router.navigate(['/signup']);

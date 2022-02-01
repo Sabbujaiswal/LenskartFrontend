@@ -28,6 +28,7 @@ export class NavbarComponent implements OnInit {
     }
     this._wishlistService.getFrames().subscribe(data => {
       this.length1 = data.length
+      console.log(this.length1)
     })
     this._basketService.getFrames().subscribe(data => {
       this.length2 = data.length
