@@ -1,7 +1,15 @@
-<div *ngFor="let user of users" >
-    <p>{{user.userName}} </p>
-    <p> {{user.email}} </p>
-    <p> {{user.mobile}} </p>
-    <p> {{user.address}} </p>
-    <p> {{user.zipcode}} </p>
+
+
+<div  class="container">
+ 
+<div *ngFor="let user of users" class="sm-container"> 
+    <img src="assets/gifs/user1.jpg" class="user-img">
+       <p class="title">Name : <span class="sub-title">{{user.userName}}</span>    </p>
+       <p class="title" >Mobile:  <span class="sub-title">{{user.mobile}}</span>  </p>
+       <p class="title">Email: <span class="sub-title">{{user.email}}</span> </p>
+       <p class="title">Address: <span class="sub-title">{{user.address}}</span> </p>
+       <p class="title"> <span class="sub-title">{{user.zipcode}}</span> </p>
+</div>
+
+
 </div>

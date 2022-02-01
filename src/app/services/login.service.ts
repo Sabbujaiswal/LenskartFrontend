@@ -16,10 +16,15 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  loginWithEmail = (email: string, password: string): Observable<User> => {
+  loginWithEmail = (email: string, password: string): Observable<User>|null => {
     let url = `${this._baseurl1}/email/${email}/password/${password}`;
     const user = this.http.get<User>(url)
-    return user;
+    if(user){
+      return user;
+    }
+    else{
+      return null
+    } 
   }
 
   loginWithMobile = (mobile: string, password: string): Observable<User> => {
@@ -29,14 +34,16 @@ export class LoginService {
     return user;
   }
 
-  isUserLoggedIn = (): Observable<User> | null => {
+  isUserLoggedIn = (): String |null => {
     if (!this.user) {
       return null;
     }
-    return of(this.user)
+    return "Logged In"
 
   }
-
+  returnLogStatus=()=>{
+    return this.logStatus;
+  }
 
 
 }

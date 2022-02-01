@@ -15,16 +15,17 @@ export class NavbarComponent implements OnInit {
   count: number = 0;
   length1: number = 0;
   length2: number = 0;
-  logStatus: string = ""
+  nlogStatus: string = ""
 
   constructor(private _router: Router, private _basketService: BasketService, private _wishlistService: WishlistService, private _loginService: LoginService) { }
 
   ngOnInit(): void {
-    this.logStatus = this._loginService.logStatus;
+    console.log("retLo "+this._loginService.returnLogStatus())
+    this.nlogStatus = this._loginService.logStatus;
     console.log(this._loginService.countOfLoginPage);
     console.log("Hi")
     if (this._loginService.countOfLoginPage == 1) {
-      this.logStatus = "LogOut"
+      this.nlogStatus = "LogOut"
     }
     this._wishlistService.getFrames().subscribe(data => {
       this.length1 = data.length
@@ -60,25 +61,29 @@ export class NavbarComponent implements OnInit {
 
 
     this.count += 1;
-    if (this._loginService.countOfLoginPage == 0 && this.logStatus == "Login/SignUp") {
+    if (this._loginService.countOfLoginPage == 0 && this._loginService.logStatus == "Login/SignUp") {
       let user = this._router.navigate(['/login'])
 
       //console.log("Hi")
       // console.log(this._loginService.countOfLoginPage+=1)
-
+      console.log(this._loginService.countOfLoginPage)
       setTimeout(() => {
+      console.log(this._loginService.countOfLoginPage)
+
         if (this._loginService.countOfLoginPage == 1) {
-          this.logStatus = "LogOut"
+          this._loginService.logStatus = "LogOut"
+          this.nlogStatus=this._loginService.logStatus;
 
         }
       }, 10000)
 
     }
 
-    else if (this.logStatus == "LogOut") {
+    else if (this._loginService.logStatus == "LogOut") {
       this._loginService.countOfLoginPage = 0;
       this._router.navigate(['/end']);
-      this.logStatus = "Login/SignUp"
+      this._loginService.logStatus = "Login/SignUp"
+      this.nlogStatus=this._loginService.logStatus;
 
     }
 

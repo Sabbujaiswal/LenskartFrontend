@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CarouselComponent } from './carousel/carousel.component';
 import { AddFrameComponent } from './components/add-frame/add-frame.component';
 import { AdminFramesComponent } from './components/admin-frames/admin-frames.component';
+import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { BasketComponent } from './components/basket/basket.component';
 import { DeleteFrameComponent } from './components/delete-frame/delete-frame.component';
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path:'sub-nav',component:SubNavComponent},
   {path:'end',component:EndComponent},
   {path:'signup',component:SignupComponent},
+  {path:'admin-login',component:AdminLoginComponent},
   
 
   {path:'admin',component:AdminComponent,

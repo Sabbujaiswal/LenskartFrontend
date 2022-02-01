@@ -17,6 +17,7 @@ export class SampleFramesComponent implements OnInit {
   constructor(private _frameService: FrameService, private _router: Router, private _activatedRoute: ActivatedRoute, private _loginService: LoginService) { }
 
   ngOnInit(): void {
+    console.log(this._loginService.countOfLoginPage)
     this._activatedRoute.queryParamMap.subscribe(map => {
       let fbrand = map.get('brand');
       if (fbrand)
@@ -25,7 +26,7 @@ export class SampleFramesComponent implements OnInit {
         next: (data) => {
 
           for (let i = 1; i <= 10; i++) {
-            console.log(i)
+           // console.log(i)
             this.frames.push(data[i])
            // console.log(data[i])
           }
@@ -40,19 +41,20 @@ export class SampleFramesComponent implements OnInit {
 
   onSubmit = (frame: Frame) => {
     if (this._loginService.countOfLoginPage==0 && this._loginService.logStatus=="Login/SignUp"){
-      this._router.navigate(['/login']);
-      console.log(this._loginService.countOfLoginPage);
-     
-    // console.log( this._loginService.logStatus)
-     setTimeout(()=>{
-      if ( this._loginService.countOfLoginPage==1){
-        this._loginService.logStatus="LogOut"
-       
-      }
-    },9000)
+     alert("Please Login To see all the frames")
+  //    this._router.navigate(['/login']);
+  //    console.log(this._loginService.countOfLoginPage);
+    
+  //  // console.log( this._loginService.logStatus)
+  //   setTimeout(()=>{
+  //    if ( this._loginService.countOfLoginPage==1){
+  //      this._loginService.logStatus="LogOut"
+      
+  //    }
+  //  },9000)
     
     }else{
-      this._router.navigate(['/frame'])
+     this._router.navigate(['/frame'])
     }
    
   };
@@ -60,18 +62,21 @@ export class SampleFramesComponent implements OnInit {
   seeAll = () => {
    
     if (this._loginService.countOfLoginPage==0 && this._loginService.logStatus=="Login/SignUp"){
-      //console.log(this._loginService.countOfLoginPage)
-      this._router.navigate(['/login']);
-      //console.log(this._loginService.countOfLoginPage);
-      console.log( this._loginService.logStatus)
-      setTimeout(()=>{
-        if ( this._loginService.countOfLoginPage==1){
-          this._loginService.logStatus="LogOut"
-  
-        }
-      },10000)
+     alert("Please Login To see all the frames")
 
-    }else{
+    //   //console.log(this._loginService.countOfLoginPage)
+    //   this._router.navigate(['/login']);
+    //   //console.log(this._loginService.countOfLoginPage);
+    //   console.log( this._loginService.logStatus)
+    //   setTimeout(()=>{
+    //     if ( this._loginService.countOfLoginPage==1){
+    //       this._loginService.logStatus="LogOut"
+  
+    //     }
+    //   },10000)
+
+     }
+    else{
       this._router.navigate(['/frame'])
     }
 

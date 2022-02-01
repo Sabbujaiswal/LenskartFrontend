@@ -11,9 +11,9 @@ export class AdminComponent implements OnInit {
     {
       label:"Add Frame",route:"add-product",active:true
     },
-    {
-      label:"Update Frame",route:"update-product",active:true
-    },
+    // {
+    //   label:"Update Frame",route:"update-product",active:true
+    // },
     {
       label:"All Frames",route:"admin-frame",active:true
     },

@@ -30,6 +30,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { DetailsComponent } from './components/details/details.component';
 import { AdminFramesComponent } from './components/admin-frames/admin-frames.component';
 import { UsersComponent } from './components/users/users.component';
+import { AdminLoginComponent } from './components/admin-login/admin-login.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { UsersComponent } from './components/users/users.component';
     SignupComponent,
     DetailsComponent,
     AdminFramesComponent,
-    UsersComponent
+    UsersComponent,
+    AdminLoginComponent
     
   ],
   imports: [
