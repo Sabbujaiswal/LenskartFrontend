@@ -5,9 +5,9 @@
         <p>Please fill in this form to create an account.</p>
         <hr>
 
-        <label for="username"><b>Username*</b></label>
-        <input type="text" #username="ngModel" ngModel placeholder="Enter User Name" name="username" required>
-        <mat-label *ngIf="username.touched&&username.pristine" [ngStyle]="{'color':'red'}">  Username is required</mat-label>
+        <label for="userName"><b>Username*</b></label>
+        <input type="text" #userName="ngModel" ngModel placeholder="Enter User Name" name="userName" required>
+        <mat-label *ngIf="userName.touched&&userName.pristine" [ngStyle]="{'color':'red'}">  Username is required</mat-label>
 
         <br>
         <br>
@@ -32,15 +32,15 @@
         <br>
         <br>
 
-        <label for="email"><b>Email</b></label>
+        <label for="email"><b>Email*</b></label>
         <input type="text" #email= "ngModel" ngModel placeholder="Enter Email" name="email" required>
         <mat-label *ngIf="email.touched&&email.pristine" [ngStyle]="{'color':'red'}">  Email is required</mat-label>
 
         <br>
         <br>
     
-        <label for="psw"><b>Password</b></label>
-        <input type="password" #password="ngModel" ngModel placeholder="Enter Password" name="psw" required>
+        <label for="password"><b>Password*</b></label>
+        <input type="password" #password="ngModel" ngModel placeholder="Enter Password" name="password" required>
         <mat-label *ngIf="password.touched&&password.pristine" [ngStyle]="{'color':'red'}">  Password is required</mat-label>
 
         <br>

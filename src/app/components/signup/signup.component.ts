@@ -17,18 +17,21 @@ export class SignupComponent implements OnInit {
   onAdd=(addForm:NgForm)=>{
     console.log(addForm.value)
     let user=addForm.value;
-    this._adminService.addUser(user).subscribe({
-      next:(data)=>{
-        console.log(data);
-      },
-      error:(err)=>{
-        console.log(err)
-      },
-      complete:()=>{
-        console.log('complete');
-      },
-  
-  });
+    if (user.mobile.length===10&&(user.email.endsWith("@gmail.com")||user.email.endsWith("@email.com"))){
+      console.log("everything working")
+      this._adminService.addUser(user).subscribe({
+        next:(data)=>{
+          console.log(data);
+        },
+        error:(err)=>{
+          console.log(err)
+        },
+        complete:()=>{
+          console.log('complete');
+        },
+    
+    });
+    }
 };
 
 }
