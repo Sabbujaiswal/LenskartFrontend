@@ -14,6 +14,7 @@ export class FrameComponent implements OnInit {
   foods=['jilebi','h','u']
   userSearch = ''
   searchOption = 'Search '
+  oops:string=''
   selected = '';
   nframes: Frame[] = []
   options = [
@@ -28,6 +29,7 @@ export class FrameComponent implements OnInit {
   constructor(private _frameService: FrameService, private _router: Router, private _activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    
     console.log(this.userSearch)
     this._activatedRoute.queryParamMap.subscribe(map => {
 
@@ -100,7 +102,9 @@ export class FrameComponent implements OnInit {
         this.frames=data.filter(t=>t.color.toLowerCase()===formValue)
       }
       else{
-        this.frames=[]
+       
+          this.oops="OOPS frames are not found"
+      
       }
 
     })

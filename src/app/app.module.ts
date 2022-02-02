@@ -68,8 +68,9 @@ import { AdminLoginComponent } from './components/admin-login/admin-login.compon
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    NgbModule,
     AppRoutingModule,
-    NgbModule
+    
 
   ],
   providers: [],

@@ -17,7 +17,9 @@
   </form>
 </div>
 
-<div class="container">
+<div *ngIf="frames.length==0">{{oops}} </div>
+
+<div class="container" *ngIf="frames.length!=0">
   <mat-card *ngFor="let frame of frames" class="frame-container">
     <mat-card-header class="title">{{frame.name}}</mat-card-header>
     <img mat-card-md-image src="{{frame.frameImg}}" class="img-container">

@@ -42,6 +42,7 @@ export class SampleFramesComponent implements OnInit {
   onSubmit = (frame: Frame) => {
     if (this._loginService.countOfLoginPage==0 && this._loginService.logStatus=="Login/SignUp"){
      alert("Please Login To see all the frames")
+     
   //    this._router.navigate(['/login']);
   //    console.log(this._loginService.countOfLoginPage);
     
