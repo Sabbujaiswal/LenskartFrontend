@@ -17,6 +17,7 @@ export class SignupComponent implements OnInit {
   onAdd=(addForm:NgForm)=>{
     console.log(addForm.value)
     let user=addForm.value;
+   if(user.mobile.length===10){
     this._adminService.addUser(user).subscribe({
       next:(data)=>{
         console.log(data);
@@ -29,6 +30,8 @@ export class SignupComponent implements OnInit {
       },
   
   });
+
+   }
 };
 
 }

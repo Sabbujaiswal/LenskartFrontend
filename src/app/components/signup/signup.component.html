@@ -5,16 +5,16 @@
         <p>Please fill in this form to create an account.</p>
         <hr>
 
-        <label for="username"><b>Username*</b></label>
-        <input type="text" #username="ngModel" ngModel placeholder="Enter User Name" name="username" required>
-        <mat-label *ngIf="username.touched&&username.pristine" [ngStyle]="{'color':'red'}">  Username is required</mat-label>
+        <label for="userName"><b>Username*</b></label>
+        <input type="text" #userName="ngModel" ngModel placeholder="Enter User Name" name="userName" required>
+        <mat-label *ngIf="userName.touched&&userName.pristine" [ngStyle]="{'color':'red'}">  Username is required</mat-label>
 
         <br>
         <br>
 
         <label for="mobile"><b>Mobile*</b></label>
-        <input type="text" #mobile="ngModel" ngModel placeholder="Enter Mobile Number" name="mobile" required>
-        <mat-label *ngIf="mobile.touched&&mobile.pristine" [ngStyle]="{'color':'red'}">  Mobile Number is required</mat-label>
+        <input type="text" #mobile="ngModel" ngModel placeholder="Enter Mobile Number" name="mobile" required> 
+        <mat-label *ngIf="mobile.touched&&mobile.pristine" [ngStyle]="{'color':'red'}" >  Mobile Number is required</mat-label>
         <br>
         <br>
 
@@ -39,8 +39,8 @@
         <br>
         <br>
     
-        <label for="psw"><b>Password</b></label>
-        <input type="password" #password="ngModel" ngModel placeholder="Enter Password" name="psw" required>
+        <label for="password"><b>Password</b></label>
+        <input type="password" #password="ngModel" ngModel placeholder="Enter Password" name="password" required>
         <mat-label *ngIf="password.touched&&password.pristine" [ngStyle]="{'color':'red'}">  Password is required</mat-label>
 
         <br>
@@ -65,7 +65,7 @@
      -->
         <div class="clearfix">
           <button type="button" class="cancelbtn" routerLink="/login">Cancel</button>
-          <button type="submit" class="signupbtn" >Sign Up</button>
+          <button type="submit" class="signupbtn"  >Sign Up</button>
         </div>
       </div>
 

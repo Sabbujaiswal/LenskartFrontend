@@ -1,14 +1,14 @@
 .star{
-    color: rgb(224, 140, 31);
+    color: rgb(231, 186, 62);
+
 }
 .container{
     height: 90%;
     /* background-image: url(../../../assets/gifs/handframe.jpg); */
     display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color:white;
     margin: 0px;
     border-color:black ;
@@ -16,9 +16,16 @@ align-items: center;
    
 
 }
+.title{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 .sm-container{
     color:white;
-    background-color: white;
+    background-color: #fce691;
     height: 450px;
     width: 500px;
     text-align: center;
@@ -39,7 +46,7 @@ align-items: center;
 
 }
 .size{
-    color: white;
+    color: rgb(129, 80, 7);
     font-size: 20px;
    
 }
@@ -64,6 +71,8 @@ align-items: center;
 }
 .rating{
     color:black;
+    font-size: 20px;
+    
 }
 .price{
     color:black;

@@ -57,15 +57,9 @@
         <br>
         <br>
         <div ngModelGroup="brand">
-            <label for="shape"> <b>Lens shape</b> </label>
-            <input type="text" #shape="ngModel" ngModel placeholder="Enter shape" name="shape" required>
-            <br>
-            <label for="type"> <b>Lens Type</b> </label>
-            <input type="text" #type="ngModel" ngModel placeholder="Enter type" name="type" required>
-            <br>
-            <label for="brandName"> <b>Frame BrandName</b> </label>>
-            <input type="text" #brandName="ngModel" ngModel placeholder="Enter brandName" name="brandName" required>
-            <br>
+           <select  (change)="changeValue($event)">
+               <option *ngFor="let brand of totalbrands"  [value]="brand.brandName"> {{brand.brandName}} </option>
+           </select>
         </div>
         <label for="frameImg"> <b>FrameImg</b> </label>
         <input type="text" #frameImg="ngModel" ngModel placeholder="Enter frameImg" name="frameImg" required>
