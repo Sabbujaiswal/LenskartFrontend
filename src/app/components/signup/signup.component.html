@@ -32,14 +32,14 @@
         <br>
         <br>
 
-        <label for="email"><b>Email</b></label>
+        <label for="email"><b>Email*</b></label>
         <input type="text" #email= "ngModel" ngModel placeholder="Enter Email" name="email" required>
         <mat-label *ngIf="email.touched&&email.pristine" [ngStyle]="{'color':'red'}">  Email is required</mat-label>
 
         <br>
         <br>
     
-        <label for="password"><b>Password</b></label>
+        <label for="password"><b>Password*</b></label>
         <input type="password" #password="ngModel" ngModel placeholder="Enter Password" name="password" required>
         <mat-label *ngIf="password.touched&&password.pristine" [ngStyle]="{'color':'red'}">  Password is required</mat-label>
 
