@@ -30,17 +30,22 @@ export class LoginComponent implements OnInit {
     console.log("Email called")
     let nuser = form.value;
 
-    this._userService
-      .getUserByEmailAndPassword(nuser.email, nuser.password)
-      .subscribe((data) => {
-        this.user = data;
-        this._router.navigate(['/frame']);
-        if (data){
-        console.log(this._loginService.countOfLoginPage)
-       this._loginService.countOfLoginPage+=1
-       console.log(this._loginService.countOfLoginPage)
-
-      }
+    this._userService.getUserByEmailAndPassword(nuser.email, nuser.password)
+      .subscribe({
+        next:(data) => {
+          this.user = data;
+          this._router.navigate(['/frame']);
+          if (data){
+          console.log(this._loginService.countOfLoginPage)
+         this._loginService.countOfLoginPage+=1
+         console.log(this._loginService.countOfLoginPage)
+  
+        }
+        },
+        error:(err)=>{
+          console.log(err)
+          alert("Please give the valid credentials or do singUp if new ")
+        }
       });
 
   }

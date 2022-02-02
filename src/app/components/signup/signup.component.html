@@ -13,8 +13,8 @@
         <br>
 
         <label for="mobile"><b>Mobile*</b></label>
-        <input type="text" #mobile="ngModel" ngModel placeholder="Enter Mobile Number" name="mobile" required>
-        <mat-label *ngIf="mobile.touched&&mobile.pristine" [ngStyle]="{'color':'red'}">  Mobile Number is required</mat-label>
+        <input type="text" #mobile="ngModel" ngModel placeholder="Enter Mobile Number" name="mobile" required> 
+        <mat-label *ngIf="mobile.touched&&mobile.pristine" [ngStyle]="{'color':'red'}" >  Mobile Number is required</mat-label>
         <br>
         <br>
 
@@ -65,7 +65,7 @@
      -->
         <div class="clearfix">
           <button type="button" class="cancelbtn" routerLink="/login">Cancel</button>
-          <button type="submit" class="signupbtn" >Sign Up</button>
+          <button type="submit" class="signupbtn"  >Sign Up</button>
         </div>
       </div>
 

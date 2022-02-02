@@ -3,7 +3,7 @@
     Explore based on
   </h1>
 
-<select #cricket (change)="changeValue($event)" class="select-option">
+<select  (change)="changeValue($event)" class="select-option">
   <option value="default">----Select----</option>
   <option *ngFor="let option of options" [value]="option.title" class="option" >
       {{option.title}}

@@ -1,7 +1,7 @@
 <mat-card *ngIf="frame" class="container">
     <mat-card class="sm-container">
-        <mat-card-title [ngStyle]="{'color':'blue','font-style':'italic'}"> Name : {{frame.name}} </mat-card-title>
-        <mat-card-title [ngStyle]="{'color':'black'}">Brand : {{frame.brand.brandName.toUpperCase()}} </mat-card-title>
+        <mat-card-title class="title"> Name : {{frame.name}} </mat-card-title>
+        <mat-card-title class="title">Brand : {{frame.brand.brandName.toUpperCase()}} </mat-card-title>
         <br>
         <mat-card-content class="size">$ize: {{frame.frameSize}} </mat-card-content><br>
 
