@@ -75,3 +75,14 @@ input[type=text], input[type=password] {
     justify-content: center;
     margin-bottom: 50px;
   }
+  .select-container{
+    height: 40px;
+    width: 100%;
+    background-color: #f3f4f7;
+    margin-bottom: 20px;
+    
+  }
+  .label{
+    color: black;
+    font-weight: 600;
+  }

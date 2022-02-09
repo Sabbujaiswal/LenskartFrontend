@@ -47,6 +47,7 @@
     align-items: flex-end;
     justify-content: flex-end;
     margin-right: 30px;
+    
 }
 .all-button{
     background-color: #224eaf;
@@ -72,7 +73,7 @@
 .message-container{
     background-image: url("https://www.watsons.ae/images/svg/empty-cart-xs.svg");
     background-size: cover;
-    height: 100%;
+    height: 85%;
     display: flex;
     width: 100%;
     flex-direction: row;

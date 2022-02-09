@@ -86,8 +86,6 @@ export class FrameComponent implements OnInit {
 
         }
         )
-
-
       }
       else if (this.choice === "size") {
         this.frames = data.filter(t => t.frameSize.toLowerCase() == formValue)
@@ -108,12 +106,6 @@ export class FrameComponent implements OnInit {
       }
 
     })
-
-
-
-
-
-
 
 
 

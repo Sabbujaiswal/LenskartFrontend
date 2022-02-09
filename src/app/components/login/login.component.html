@@ -1,21 +1,17 @@
 <div class="container">
-  <mat-card>
-    <mat-tab-group>
-      <mat-tab label="Email">
+  <mat-card class="mat-card">
+    <mat-tab-group class="lg-container">
+      <mat-tab label="Login">
         <form class="form-style" #loginForm="ngForm" (ngSubmit)="onLoginWithEmail(loginForm)" novalidate>
           <mat-form-field appearance="outline">
-            <mat-label for="username">Email</mat-label>
+            <mat-label for="username" >Email</mat-label>
             <input matInput type="email" required placeholder="Enter Email" #email="ngModel" name="email" ngModel /><br>
-            <mat-label *ngIf="(email.touched&&email.pristine)" [ngStyle]="{'color':'red'}">  is required</mat-label>
+            <mat-label *ngIf="(email.touched&&email.pristine)" [ngStyle]="{'color':'#f5701b'}">  is required</mat-label>
           </mat-form-field>
-
           <mat-form-field appearance="outline">
             <mat-label>Password</mat-label>
             <input type="password" matInput placeholder="Enter password" #password="ngModel" name="password" ngModel required/>
-            <mat-label *ngIf="password.touched&&password.pristine" [ngStyle]="{'color':'red'}">  is required</mat-label>
-
-
-            <mat-hint>Hint</mat-hint>
+            <mat-label *ngIf="password.touched&&password.pristine" [ngStyle]="{'color':'#f5701b'}">  is required</mat-label>
           </mat-form-field>
 
           <button type="submit" mat-flat-button color="primary" [disabled]="!loginForm.valid">Sign In</button>
@@ -27,4 +23,36 @@
       </mat-tab>
     </mat-tab-group>
   </mat-card>
-</div>
+</div> 
+
+
+
+<!-- 
+<div class="bg-container">  
+  <div class="container-1">
+    <form class="form-style" #loginForm="ngForm" (ngSubmit)="onLoginWithEmail(loginForm)" novalidate>
+      <mat-form-field appearance="outline">
+        <label class="text login">Login</label>
+        <div>
+          <label  class="text">Email</label><br>
+          <input class="text in-border" type="email" required placeholder="Enter Email" #email="ngModel" name="email" ngModel><br>
+          <mat-label *ngIf="email.touched&&email.pristine" [ngStyle]="{'color':'red'}"> *Email is required</mat-label>
+        </div>
+      </mat-form-field>
+      <mat-form-field>
+        <div>
+          <label  class="text">Password</label><br>
+  
+          <input class="text in-border" type="password" placeholder="Enter password" #password="ngModel" name="password" ngModel
+            required><br>
+          <mat-label *ngIf="password.touched&&password.pristine" [ngStyle]="{'color':'red'}"> *Password is required
+          </mat-label>
+        </div>
+      </mat-form-field>
+      <button type="submit" mat-flat-button class="btn" [disabled]="!loginForm.valid">Sign In</button>
+  
+    </form>
+  </div>
+  <img src="assets/gifs/admin1.jpg" class="admin-img">
+  
+  </div> -->

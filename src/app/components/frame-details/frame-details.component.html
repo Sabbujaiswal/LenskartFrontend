@@ -1,31 +1,61 @@
-<mat-card *ngIf="frame" class="container">
-    <mat-card class="sm-container">
+<!-- <mat-card *ngIf="frame" class="bg-container">
+    <div class="container">
+<div >
+    <mat-card-title class="title"> Name : {{frame.name}} </mat-card-title>
+    <mat-card-title class="title">Brand : {{frame.brand.brandName.toUpperCase()}} </mat-card-title>
+    <br>
+    <mat-card-content class="size">$ize: {{frame.frameSize}} </mat-card-content><br>
+    <mat-card-content class="rating">Rating: {{frame.rating}} <mat-icon class="star">grade</mat-icon>
+    </mat-card-content>
+    <mat-card-content class="price">Rs. {{frame.price}}/-</mat-card-content>
+    <div class="btn-container">
+        <button routerLink="/frame" class="btn">Back</button>
+        
+            </div>
+</div> 
+<div>
+    <img src="{{frame.frameImg}}" class="image1" />
+    <div class="btn-container">
+        <mat-card-actions>
+            <button mat-raised-button color='primary' (click)="addToBasket(frame)">Add to Cart</button>
+        </mat-card-actions>
+        <mat-card-actions>
+            <button mat-raised-button color='primary' (click)="addToWishlist(frame)">Add to Wishlist</button>
+        </mat-card-actions>
+
+    </div>
+</div>  
+</div>  
+</mat-card> -->
+
+
+
+<mat-card *ngIf="frame" class="bg-container1">
+    <div class="container-2">
         <mat-card-title class="title"> Name : {{frame.name}} </mat-card-title>
         <mat-card-title class="title">Brand : {{frame.brand.brandName.toUpperCase()}} </mat-card-title>
         <br>
         <mat-card-content class="size">$ize: {{frame.frameSize}} </mat-card-content><br>
-
         <img src="{{frame.frameImg}}" class="image1" />
-        <div class="r-container">
-            <mat-card-content class="rating">Rating: {{frame.rating}} <mat-icon class="star">grade</mat-icon>
-            </mat-card-content>
-            <mat-card-content class="price">Rs. {{frame.price}}/-</mat-card-content>
+<div class="r-container">
+    <mat-card-content class="rating">Rating: {{frame.rating}} <mat-icon class="star">grade</mat-icon>
+    </mat-card-content>
+    <mat-card-content class="price">Rs. {{frame.price}}/-</mat-card-content>
+</div>
+<div class="btn-container">
+    <mat-card-actions>
+        <button mat-raised-button color='primary' (click)="addToBasket(frame)">Add to Cart</button>
+    </mat-card-actions>
+    <mat-card-actions>
+        <button mat-raised-button color='primary' (click)="addToWishlist(frame)">Add to Wishlist</button>
+    </mat-card-actions>
 
-        </div>
-
+</div>
         <div class="btn-container">
-            <mat-card-actions>
-                <button mat-raised-button color='primary' (click)="addToBasket(frame)">Add to Basket</button>
-            </mat-card-actions>
-            <mat-card-actions>
-                <button mat-raised-button color='primary' (click)="addToWishlist(frame)">Add to Wishlist</button>
-            </mat-card-actions>
+            <button routerLink="/frame" class="btn">Back</button>
+            
+                </div>
+    </div> 
 
-        </div>
-
-    </mat-card>
-    <div class="btn-container">
-<button routerLink="/frame" class="btn">Back</button>
-
-    </div>
+   
 </mat-card>

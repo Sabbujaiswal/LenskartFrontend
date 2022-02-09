@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AdminService } from 'src/app/services/admin.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { AdminService } from 'src/app/services/admin.service';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private _adminService:AdminService) { }
+  constructor(private _adminService:AdminService,private _router:Router) { }
 
   ngOnInit(): void {
   }
@@ -18,7 +19,8 @@ export class SignupComponent implements OnInit {
     console.log(addForm.value)
     let user=addForm.value;
     if (user.mobile.length===10&&(user.email.endsWith("@gmail.com")||user.email.endsWith("@email.com"))){
-      console.log("everything working")
+      this._router.navigate(['/sample-frames'])
+      
       this._adminService.addUser(user).subscribe({
         next:(data)=>{
           console.log(data);
@@ -31,6 +33,9 @@ export class SignupComponent implements OnInit {
         },
     
     });
+    }
+    else{
+      alert("Please give the Proper Mobile number and email to signup")
     }
 };
 

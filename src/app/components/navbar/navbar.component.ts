@@ -20,6 +20,8 @@ export class NavbarComponent implements OnInit {
   constructor(private _router: Router, private _basketService: BasketService, private _wishlistService: WishlistService, private _loginService: LoginService) { }
 
   ngOnInit(): void {
+
+    
     console.log("retLo "+this._loginService.returnLogStatus())
     this.nlogStatus = this._loginService.logStatus;
     console.log(this._loginService.countOfLoginPage);
@@ -32,6 +34,7 @@ export class NavbarComponent implements OnInit {
       console.log(this.length1)
     })
     this._basketService.getFrames().subscribe(data => {
+     
       this.length2 = data.length
     })
 
@@ -71,8 +74,11 @@ export class NavbarComponent implements OnInit {
       console.log(this._loginService.countOfLoginPage)
 
         if (this._loginService.countOfLoginPage == 1) {
-          this._loginService.logStatus = "LogOut"
+          this._loginService.logStatus = "LogOut";
+            
           this.nlogStatus=this._loginService.logStatus;
+
+          
 
         }
       }, 10000)
@@ -81,10 +87,13 @@ export class NavbarComponent implements OnInit {
 
     else if (this._loginService.logStatus == "LogOut") {
       this._loginService.countOfLoginPage = 0;
-      this._router.navigate(['/end']);
+     
       this._loginService.logStatus = "Login/SignUp"
       this.nlogStatus=this._loginService.logStatus;
-
+      this._router.navigate(['/end'])
+      .then(() => {
+        window.location.reload();
+      });
     }
 
   }

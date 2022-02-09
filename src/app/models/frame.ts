@@ -1,7 +1,6 @@
 import { Brand } from "./brand";
 import { Category } from "./category";
 import { Lens } from "./lens";
-import { Shopby } from "./shopby";
 
 export interface Frame {
     frameId: number;
@@ -15,6 +14,4 @@ export interface Frame {
     brand: Brand;
     frameImg: string;
     categories: Set<Category>;
-
-
 }

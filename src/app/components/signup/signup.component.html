@@ -1,24 +1,21 @@
-<h1 [ngStyle]="{'text-align':'center'}">Register new</h1>
-<form #addForm = "ngForm" (ngSubmit)="onAdd(addForm)">
-    <div class="container">
-        <h1>Sign Up</h1>
-        <p>Please fill in this form to create an account.</p>
-        <hr>
+<div class="form-container">
+   <h1>Sign Up</h1>
 
+<form #addForm = "ngForm" (ngSubmit)="onAdd(addForm)" class="container1">
+    <div class="container">
         <label for="userName"><b>Username*</b></label>
-        <input type="text" #userName="ngModel" ngModel placeholder="Enter User Name" name="userName" required>
+        <input matInput type="text" #userName="ngModel" ngModel placeholder="Enter User Name" name="userName" required>
         <mat-label *ngIf="userName.touched&&userName.pristine" [ngStyle]="{'color':'red'}">  Username is required</mat-label>
 
         <br>
         <br>
 
-        <label for="mobile"><b>Mobile*</b></label>
+        <label for="mobile" length=10 ><b>Mobile*</b></label>
         <input type="text" #mobile="ngModel" ngModel placeholder="Enter Mobile Number" name="mobile" required> 
         <mat-label *ngIf="mobile.touched&&mobile.pristine" [ngStyle]="{'color':'red'}" >  Mobile Number is required</mat-label>
         <br>
-        <br>
-
-        <label for="address"><b>Address*</b></label>
+       
+        <label for="address"><b>City*</b></label>
         <input type="text" #address="ngModel" ngModel placeholder="Enter Address" name="address" required>
         <mat-label *ngIf="address.touched&&address.pristine" [ngStyle]="{'color':'red'}">  Address is required</mat-label>
 
@@ -46,9 +43,9 @@
         <br>
         <br>
 
-        <label>
+        <!-- <label>
             <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-          </label>
+          </label> -->
           <br>
           <br>
     
@@ -133,6 +130,7 @@
     
       <button mat-raised-button color="warn" type="submit">Add Product</button> -->
     </form>
+   </div>
 
 
     

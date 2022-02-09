@@ -12,7 +12,7 @@
 </form> -->
 
 
-<h1 [ngStyle]="{'text-align':'center'}">Add Frame</h1>
+<h1 [ngStyle]="{'text-align':'center','margin-top':'20px'}">Add Frame</h1>
 <form #addForm="ngForm" (ngSubmit)="onAdd(addForm)">
     <div class="container">
         <p> Fill the form to add a Frame</p>
@@ -56,19 +56,20 @@
         <input type="text" #rating="ngModel" ngModel placeholder="Enter rating" name="rating" required>
         <br>
         <br>
+        <label class="label">Select frame brand</label>
         <div ngModelGroup="brand">
-           <select  (change)="changeValue($event)">
+           <select  (change)="changeValue($event)" class="select-container">
                <option *ngFor="let brand of totalbrands"  [value]="brand.brandName"> {{brand.brandName}} </option>
            </select>
         </div>
         <label for="frameImg"> <b>FrameImg</b> </label>
         <input type="text" #frameImg="ngModel" ngModel placeholder="Enter frameImg" name="frameImg" required>
         <br>
-
+        <label class="label">Select Category</label>
         <div ngModelGroup="categories" *ngIf="categories.length">
-            <select>
+            <select  (change)="changeCategoryValue($event)" class="select-container">
                 <label>Categories</label>
-                <option *ngFor="let category of categories">
+                <option *ngFor="let category of categories" [value]="category.categoryName">
                     {{category.categoryName}}
 
                 </option>
@@ -82,3 +83,10 @@
 
 </div>
 </form>
+
+
+
+
+
+
+

@@ -36,25 +36,53 @@ input[type=text], input[type=password] {
   /* Extra styles for the cancel button */
   .cancelbtn {
     padding: 14px 20px;
-    background-color: #f44336;
+    background-color:red ;
+    margin-right: 10px;
+    height: 50px;
+    width: 150px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
   }
   
   /* Float cancel and signup buttons and add an equal width */
-  .cancelbtn, .signupbtn {
-    float: left;
-    width: 50%;
-  }
+  
+.signupbtn{
+  height: 50px;
+  width: 150px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+
+}
+.container1{
+  height: 400px;
+  width: 400px;
+  border-radius: 10px;
+  border-width: 1px;
+  box-shadow:3px 3px 3px 3px #ddd ;
+  overflow-y: scroll;
+}
+
+.form-container{
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  
+}
   
   /* Add padding to container elements */
   .container {
-    padding: 16px;
+    padding: 20px;
   }
   
   /* Clear floats */
-  .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+  .clearfix {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
   
   /* Change styles for cancel button and signup button on extra small screens */
@@ -63,3 +91,24 @@ input[type=text], input[type=password] {
       width: 100%;
     }
   }
+
+  .signup{
+    position: fixed;
+    background-color: white;
+
+  }
+
+  
+  
+  .container > h2 {
+    font-size: 2rem;
+    margin: 1.5rem 0 1.5rem 0;
+   
+  }
+  
+  .form-style {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  

@@ -3,12 +3,12 @@
     Explore based on
   </h1>
 
-<select  (change)="changeValue($event)" class="select-option">
-  <option value="default">----Select----</option>
-  <option *ngFor="let option of options" [value]="option.title" class="option" >
-      {{option.title}}
-  </option>
-</select>
+  <select  (change)="changeValue($event)" class="select-option">
+    <option value="default">----Select----</option>
+    <option *ngFor="let option of options" [value]="option.title" class="option" >
+        {{option.title}}
+    </option>
+  </select>
 
   <form #form="ngForm" (ngSubmit)="onSubmitForm(form)">
     <input type="search" name="search" placeholder={{searchOption}} #search="ngModel" ngModel
