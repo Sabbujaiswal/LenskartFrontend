@@ -56,13 +56,22 @@ input[type=text], input[type=password] {
 }
 .container1{
   height: 400px;
-  width: 400px;
+  width: 380px;
+  border-style: solid;
   border-radius: 10px;
-  border-width: 1px;
+  border-width: 0.5px;
   box-shadow:3px 3px 3px 3px #ddd ;
   overflow-y: scroll;
 }
+.number{
+  height: 50px;
+  width: 340px;
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: rgb(247, 244, 244);
+  border-style: none;
 
+}
 .form-container{
   display: flex;
 
@@ -98,7 +107,6 @@ input[type=text], input[type=password] {
 
   }
 
-  
   
   .container > h2 {
     font-size: 2rem;

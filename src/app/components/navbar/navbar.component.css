@@ -25,7 +25,7 @@
     border-radius: 10px;
 }
 .spacer{
-    margin-left:600px;
+    margin-left:780px;
     margin-right: 20px;
     
 }
@@ -67,6 +67,9 @@
 }
 .badge{
     margin: 0px;
+}
+.favourite{
+    margin-right: 20px;
 }
 
 

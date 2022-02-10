@@ -4,14 +4,14 @@
 <form #addForm = "ngForm" (ngSubmit)="onAdd(addForm)" class="container1">
     <div class="container">
         <label for="userName"><b>Username*</b></label>
-        <input matInput type="text" #userName="ngModel" ngModel placeholder="Enter User Name" name="userName" required>
+        <input matInput type="text" #userName="ngModel" ngModel placeholder="Enter User Name" name="userName" required >
         <mat-label *ngIf="userName.touched&&userName.pristine" [ngStyle]="{'color':'red'}">  Username is required</mat-label>
 
         <br>
         <br>
 
-        <label for="mobile" length=10 ><b>Mobile*</b></label>
-        <input type="text" #mobile="ngModel" ngModel placeholder="Enter Mobile Number" name="mobile" required> 
+        <label for="mobile"  ><b>Mobile*</b></label><br>
+        <input type="text" class="number" matInput #mobile="ngModel" ngModel placeholder="Enter Mobile Number" pattern="^[0–9]$" title="number only"  maxlength="10" name="mobile" required> 
         <mat-label *ngIf="mobile.touched&&mobile.pristine" [ngStyle]="{'color':'red'}" >  Mobile Number is required</mat-label>
         <br>
        
@@ -23,7 +23,7 @@
         <br>
 
         <label for="zipcode"><b>Zipcode*</b></label>
-        <input type="text" #zipcode="ngModel" ngModel placeholder="Enter Zipcode" name="zipcode" required>
+        <input type="text" #zipcode="ngModel" ngModel placeholder="Enter Zipcode" name="zipcode" pattern="^[6-9]\d{9}$"  required maxlength="6" class="number">
         <mat-label *ngIf="zipcode.touched&&zipcode.pristine" [ngStyle]="{'color':'red'}">  zipcode is required</mat-label>
 
         <br>
