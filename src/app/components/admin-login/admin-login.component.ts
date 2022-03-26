@@ -14,7 +14,6 @@ export class AdminLoginComponent implements OnInit {
   admins=[
     {email:'divya123@gmail.com',password:'divya1000'},
     {email:'sabbu123@gmail.com',password:'sabbu1000'},
-
     {email:'malli123@gmail.com',password:'malli1000'}
 
   ]
